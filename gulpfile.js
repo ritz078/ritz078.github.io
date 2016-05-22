@@ -33,12 +33,17 @@ gulp.task('templates', () => {
     .pipe(gulp.dest('.tmp/templates'));
 });
 
-gulp.task('deploy', ['build'], () => {
+gulp.task('deploy', ['build', 'copy'], () => {
   return gulp.src('dist')
     .pipe($.subtree({
       branch: 'master'
     }))
     .pipe($.clean());
+});
+
+gulp.task('copy', () => {
+  return gulp.src('CNAME')
+    .pipe($.copy('dist'))
 });
 
 gulp.task('scripts', () => {
