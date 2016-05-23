@@ -16,6 +16,11 @@ const projects = {
     url: 'https://github.com/ritz078/react-filters',
     image:'rf.png'
   },{
+    name: 'react-fuzzy-search',
+    url: 'https://github.com/ritz078/react-fuzzy-search',
+    desc:'A fuzzy search component written in React.',
+    image:'react.png'
+  },{
     name: 'ng-embed',
     desc: 'An AngularJS filter/directive for embedding emojis, media, maps, tweets, code and services. Currently supports Angular 1.x',
     url: 'https://github.com/ritz078/ngEmbed',
