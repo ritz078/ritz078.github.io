@@ -91,14 +91,24 @@ body {
     position: absolute;
     width: $left;
     bottom: 10px;
+    @media #{$mobile} {
+      position: relative;
+      width: auto;
+    }
     .copy {
       text-align: center;
       font-size: 14px;
       color: #666;
+      @media #{$mobile} {
+        display: none;
+      }
     }
     .social{
       display: table;
       margin: 20px auto;
+      @media #{$mobile} {
+        margin-bottom: 0;
+      }
       a{
         font-size: 20px;
         color:#888;
@@ -118,6 +128,11 @@ body {
   min-height: 100%;
   background-color: #ffffff;
   padding: 30px;
+
+  @media #{$mobile} {
+    width: 100%;
+    left:0;
+  }
 
   h3 {
     text-transform: uppercase;
@@ -142,6 +157,9 @@ body {
       margin-right: 15px;
       background: #E8E8E8 center;
       background-size: cover;
+      @media #{$mobile} {
+        display: none;
+      }
     }
     .desc {
       font-size: 13px;
