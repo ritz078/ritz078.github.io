@@ -1,7 +1,8 @@
 // bower:scss
-@import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@import "fonts";
 
 $left: 300px;
 $right: 1024px - $left;
@@ -63,7 +64,7 @@ body {
   .dp {
     width: 120px;
     height: 120px;
-    background: #ffffff url("../images/favicon.png") center;
+    background: #ffffff url("../images/favicon_lazy.png") center;
     background-size: cover;
     padding: 10px;
     border-radius: 3px;
