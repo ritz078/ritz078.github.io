@@ -2,6 +2,9 @@
   background: url(../images/spritesheet.png) no-repeat;
   display: block;
   background-size: 320px 240px;
+  @media #{$mobile} {
+    background: none;
+  }
 }
 
 .sprite-arduino {

@@ -2,9 +2,6 @@
 // endbower
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-@import "fonts";
-@import "sprite";
-
 $left: 300px;
 $right: 1024px - $left;
 
@@ -12,6 +9,9 @@ $left-background: #f4f4f4;
 $anchor-color: #1E6FFF;
 
 $mobile: "(max-width: 768px)";
+
+@import "fonts";
+@import "sprite";
 
 * {
   margin: 0;
