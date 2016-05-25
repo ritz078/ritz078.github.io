@@ -1,0 +1,65 @@
+.sprite {
+  background: url(../images/spritesheet.png) no-repeat;
+  display: block;
+  background-size: 320px 240px;
+}
+
+.sprite-arduino {
+  width: 150px;
+  height: 142px;
+  background-position: -2.5px -2.5px;
+}
+
+.sprite-css {
+  width: 150px;
+  height: 150px;
+  background-position: -82.5px -2.5px;
+}
+
+.sprite-ejs {
+  width: 150px;
+  height: 150px;
+  background-position: -162.5px -2.5px;
+}
+
+.sprite-flow {
+  width: 150px;
+  height: 150px;
+  background-position: -2.5px -82.5px;
+}
+
+.sprite-hbs {
+  width: 150px;
+  height: 150px;
+  background-position: -82.5px -82.5px;
+}
+
+.sprite-iot {
+  width: 150px;
+  height: 150px;
+  background-position: -162.5px -165/2px;
+}
+
+.sprite-js {
+  width: 150px;
+  height: 150px;
+  background-position: -2.5px -162.5px;
+}
+
+.sprite-ng {
+  width: 150px;
+  height: 150px;
+  background-position: -82.5px -162.5px;
+}
+
+.sprite-react {
+  width: 150px;
+  height: 150px;
+  background-position: -162.5px -162.5px;
+}
+
+.sprite-rf {
+  width: 150px;
+  height: 150px;
+  background-position: -242.5px -2.5px;
+}
