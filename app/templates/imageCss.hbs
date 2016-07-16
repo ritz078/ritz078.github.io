@@ -1,0 +1,9 @@
+{{#sprites}}
+    $position-{{name}}: ({{px.offset_x}} / 2) ({{px.offset_y}} / 2);
+    .image-{{name}} {
+    display: block;
+    background-image: url({{{escaped_image}}});
+    background-size: {{px.total_width}} / 2 {{px.total_height}} / 2;
+    background-position: $position-{{name}};
+    }
+{{/sprites}}

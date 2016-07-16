@@ -7,6 +7,7 @@ const wiredep = require('wiredep').stream;
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+const rename = require('gulp-rename');
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -17,10 +18,10 @@ gulp.task('styles', () => {
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
-    .pipe($.autoprefixer({browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']}))
+    .pipe($.autoprefixer({ browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'] }))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
 gulp.task('templates', () => {
@@ -53,12 +54,15 @@ gulp.task('scripts', () => {
     .pipe($.babel())
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest('.tmp/scripts'))
-    .pipe(reload({stream: true}));
+    .pipe(reload({ stream: true }));
 });
 
-function lint(files, options) {
+function lint (files, options) {
   return gulp.src(files)
-    .pipe(reload({stream: true, once: true}))
+    .pipe(reload({
+      stream: true,
+      once: true
+    }))
     .pipe($.eslint(options))
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
@@ -82,10 +86,13 @@ gulp.task('lint:test', () => {
 
 gulp.task('html', ['styles', 'scripts', 'templates'], () => {
   return gulp.src('app/*.html')
-    .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
+    .pipe($.useref({ searchPath: ['.tmp', 'app', '.'] }))
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
-    .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if('*.css', $.cssnano({
+      safe: true,
+      autoprefixer: false
+    })))
+    .pipe($.if('*.html', $.htmlmin({ collapseWhitespace: true })))
     .pipe(gulp.dest('dist'));
 });
 
@@ -96,13 +103,14 @@ gulp.task('images', () => {
       interlaced: true,
       // don't remove IDs from SVGs, they are often used
       // as hooks for embedding and styling
-      svgoPlugins: [{cleanupIDs: false}]
+      svgoPlugins: [{ cleanupIDs: false }]
     })))
     .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {
+  })
     .concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
@@ -119,7 +127,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'templates', 'fonts'], () => {
+gulp.task('serve', ['styles', 'scripts', 'templates', 'fonts', 'sprites'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -142,7 +150,7 @@ gulp.task('serve', ['styles', 'scripts', 'templates', 'fonts'], () => {
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
-  gulp.watch('app/templates/**/*.hbs', ['templates', reload]);
+  gulp.watch('app/templates/**/*.hbs', ['templates','sprites', reload]);
 });
 
 gulp.task('serve:dist', () => {
@@ -189,8 +197,23 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
+gulp.task('sprites', function () {
+  var spriteData = gulp.src(['app/images/sprite_images/*.png', 'app/images/sprite_images/*.jpg']).pipe($.spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.scss',
+    imgPath: '../images/sprite.png',
+    cssFormat: 'css',
+    cssTemplate: 'app/templates/imageCss.hbs'
+  }));
+  spriteData.css.pipe(gulp.dest('app/styles/'));
+  spriteData.img.pipe(gulp.dest('app/images/'));
+});
+
+gulp.task('build', ['lint', 'sprites', 'html', 'images', 'fonts', 'extras'], () => {
+  return gulp.src('dist/**/*').pipe($.size({
+    title: 'build',
+    gzip: true
+  }));
 });
 
 gulp.task('default', ['clean'], () => {

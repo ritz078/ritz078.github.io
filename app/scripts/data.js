@@ -11,6 +11,17 @@ const projects = {
       icon: 'product-hunt'
     }]
   }, {
+    name: 'emoji-assistant',
+    desc: 'A chrome extension to autosuggest emojis while writing on the web. It works in any test input fields, textarea and contenteditable divs.',
+    url: 'https://github.com/ritz078/emoji-assistant',
+    image: 'ea',
+    tags: [{
+      name: 'Producthunt',
+      url: 'https://www.producthunt.com/tech/emoji-assistant',
+      color: '#DA552F',
+      icon: 'product-hunt'
+    }]
+  }, {
     name: 'react-filters (WIP)',
     desc: ' A collection of customizable filters like radio, checkbox, select etc. written in React.',
     url: 'https://github.com/ritz078/react-filters',

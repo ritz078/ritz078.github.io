@@ -1,0 +1,77 @@
+    $position-arduino: (-450px / 2) (-149px / 2);
+    .image-arduino {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-arduino;
+    }
+    $position-css: (-300px / 2) (-150px / 2);
+    .image-css {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-css;
+    }
+    $position-ea: (-450px / 2) (0px / 2);
+    .image-ea {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-ea;
+    }
+    $position-ejs: (-150px / 2) (-150px / 2);
+    .image-ejs {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-ejs;
+    }
+    $position-flow: (-300px / 2) (0px / 2);
+    .image-flow {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-flow;
+    }
+    $position-hbs: (0px / 2) (-150px / 2);
+    .image-hbs {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-hbs;
+    }
+    $position-iot: (0px / 2) (0px / 2);
+    .image-iot {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-iot;
+    }
+    $position-js: (-150px / 2) (0px / 2);
+    .image-js {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-js;
+    }
+    $position-ng: (0px / 2) (-300px / 2);
+    .image-ng {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-ng;
+    }
+    $position-react: (-150px / 2) (-300px / 2);
+    .image-react {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-react;
+    }
+    $position-rf: (-300px / 2) (-300px / 2);
+    .image-rf {
+    display: block;
+    background-image: url(../images/sprite.png);
+    background-size: 600px / 2 450px / 2;
+    background-position: $position-rf;
+    }
