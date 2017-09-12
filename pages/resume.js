@@ -362,8 +362,8 @@ export default class extends PureComponent {
               Mumbai, India
               <br />
               <i className="fa fa-fw fa-globe" />
-              <a href="http://riteshkr.com" target="_blank">
-                http://riteshkr.com
+              <a href="https://riteshkr.com" target="_blank">
+                https://riteshkr.com
               </a>
             </div>
 
