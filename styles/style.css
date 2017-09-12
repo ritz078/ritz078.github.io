@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Voces');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Voces', sans-serif;
+}
+
+.social {
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 30px;
+    max-width: 200px;
+}
+
+.social i {
+    color: white;
+    background-color: #888;
+    width: 32px;
+    border-radius: 50%;
+    height: 32px;
+    padding: 9px 0;
+    text-align: center;
+}
+
+.social i:hover {
+    background-color: #e43a79;
+}
+
