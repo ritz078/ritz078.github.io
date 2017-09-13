@@ -12,7 +12,7 @@ const experience = [
     label: "Housing.com | Senior Software Developer",
     timeline: "June 2015 - Present",
     content: [
-      "Housing Go - Development of a PWA from scratch which involved preact, redux, architecture setup and SSR.",
+      "Housing Go - Development of a PWA from scratch which involved preact, redux, architecture setup and Server Side Rendering.",
       "Housing Partner - Created a dashboard used by brokers and owners developed with Angular 2 and ngrx.",
       "Housing App - A cross platform app developed using React-Native. Involved Redux, Observables, Immutable.js"
     ]
@@ -371,7 +371,7 @@ export default class extends PureComponent {
             <div className="content">
               JavaScript, HTML, CSS <br />
               React, Redux, React Native, Angular 2 <br />
-              Git, OSX
+              Git, macOS
             </div>
           </div>
 
