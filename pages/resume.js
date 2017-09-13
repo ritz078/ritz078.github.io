@@ -46,7 +46,7 @@ const oss = [
     url: "https://github.com/transform-it",
     label: "Transform",
     desc:
-      "An <a href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a href='https://github.com/ritz078'>tranform-it</a>."
+      "An <a href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a href='https://github.com/transform-it'>tranform-it</a>."
   },
   {
     url: "https://github.com/ritz078/embed-js",
