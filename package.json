@@ -9,7 +9,7 @@
     "start": "next start",
     "build": "next build && next export -o personal-web",
     "deploy": "npm run build && cd personal-web && now",
-    "format": "prettier --write 'pages/*.js'"
+    "format": "prettier --write 'pages/*.js' 'components/*.js'"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +23,9 @@
     "is-in-browser": "^1.1.3",
     "isomorphic-unfetch": "^2.0.0",
     "lru-cache": "^4.1.1",
+    "material-design-lite": "^1.3.0",
     "next": "^3.2.2",
+    "plyr": "^2.0.13",
     "postcss-easy-import": "^3.0.0",
     "postcss-loader": "^2.0.6",
     "preact": "^8.2.5",
@@ -32,9 +34,11 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-github-corner": "^1.0.0",
+    "react-modal": "^2.3.2",
     "react-progressive-image-loading": "^3.0.2"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "cssnano": "^3.10.0",
     "prettier": "^1.6.1"
   }

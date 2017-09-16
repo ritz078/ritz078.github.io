@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
-import stylesheet from "styles/style.css";
+import stylesheet from "styles/base.css";
 
 const colors = {
   primary: "#e05588"
@@ -78,7 +78,12 @@ export default class extends PureComponent {
         <Head>
           <title>Resume | Ritesh Kumar</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/static/favicon.png"
+          />
           <meta
             name="description"
             content="JavaScript lover, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
@@ -234,14 +239,6 @@ export default class extends PureComponent {
             box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
           }
         `}</style>
-
-        <style jsx global>{`
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-        `}</style>
         <div className="resume-wrapper">
           <div className="left">
             <div className="info">
@@ -297,7 +294,7 @@ export default class extends PureComponent {
             <h3>Conference</h3>
             <div className="section-wrapper">
               <div className="content">
-                <a href="https://youtu.be/dug_6lgZ7dw?t=3m14s" target="_blank">
+                <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
                   <b>Chrome Developers Summit 2016</b>
                 </a>{" "}
                 - Spoke about the development process and performance
