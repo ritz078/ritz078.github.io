@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import isBrowser from "is-in-browser";
 import Modal from "react-modal";
+import { Play } from "../components/Svgs";
 
 export default class extends PureComponent {
   state = {
@@ -85,12 +86,12 @@ export default class extends PureComponent {
             flex: 1;
           }
 
-          .fa-close {
+          .close {
             color: #fff;
             position: absolute;
             right: 20px;
             top: 20px;
-            font-size: 24px;
+            font-size: 44px;
             cursor: pointer;
           }
 
@@ -101,6 +102,11 @@ export default class extends PureComponent {
             display: flex;
             max-width: 711px;
             margin: 0 auto;
+          }
+
+          .yt-wrapper iframe {
+            width: 100%;
+            border: 0;
           }
 
           @media screen and (max-width: 700px) {
@@ -122,9 +128,15 @@ export default class extends PureComponent {
             }
           }
         `}</style>
+
+        <style jsx global>{`
+          .conference-img svg {
+            height: 40px;
+          }
+        `}</style>
         <div className="conference">
           <div className="conference-img" onClick={this.openModal}>
-            <i className="fa fa-play" />
+            <Play />
           </div>
           <div className="conference-info">
             <h5>Chrome Developer Summit 2016</h5>
@@ -134,8 +146,14 @@ export default class extends PureComponent {
             </h6>
           </div>
         </div>
-        <Modal isOpen={this.state.showModal} style={style} contentLabel="Conference">
-          <i className="fa fa-close" onClick={this.closeModal} />
+        <Modal
+          isOpen={this.state.showModal}
+          style={style}
+          contentLabel="Conference"
+        >
+          <i className="close" onClick={this.closeModal}>
+            &times;
+          </i>
           <div className="yt-wrapper">
             <iframe
               height="400"

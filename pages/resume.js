@@ -91,6 +91,8 @@ export default class extends PureComponent {
         </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
+          @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
           .wrapper {
             background-color: #666;
             min-height: 100vh;

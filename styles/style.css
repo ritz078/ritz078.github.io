@@ -9,10 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-    background-image: url('./static/cover.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #000;
 }
 
 .banner {
@@ -25,7 +22,7 @@ html {
     height: 100vh;
     min-height: 600px;
     padding: 0 40px;
-    background-color: rgba(0, 0, 0, 0.93);
+    background-color: #000;
     color: #fff;
   }
 
@@ -89,9 +86,9 @@ html {
     justify-content: space-between;
 }
 
-.social-home i {
+.social-home svg {
     color: #fff;    
-    padding: 15px;
+    height: 32px;
 }
 
 .ReactModal__Overlay {

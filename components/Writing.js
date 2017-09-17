@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { Blog } from "../components/Svgs";
 
 const blogs = [
   {
@@ -122,9 +123,19 @@ export default class extends PureComponent {
             }
           }
         `}</style>
+
+        <style jsx global>{`
+          .blog-left path {
+            fill: #444;
+          }
+
+          .blog-left svg {
+            height: 84px;
+          }
+        `}</style>
         <div className="blog-wrapper">
           <div className="blog-left">
-            <i className="fa fa-pencil" />
+            <Blog />
           </div>
           <div className="blog-right">
             {blogs.map(b => (
