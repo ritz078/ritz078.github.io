@@ -8,12 +8,26 @@ import Writing from "../components/Writing";
 import materialCss from "material-design-lite/material.css";
 
 export default class extends PureComponent {
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(registration => {
+          console.log("service worker registration successful");
+        })
+        .catch(err => {
+          console.warn("service worker registration failed");
+        });
+    }
+  }
+
   render() {
     return (
       <div>
         <Head>
           <title>Ritesh Kumar | Frontend Developer</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
+          <link rel="manifest" href="/static/manifest.json" />
           <link
             rel="icon"
             type="image/png"
@@ -22,10 +36,11 @@ export default class extends PureComponent {
           />
           <meta
             name="description"
-            content="JavaScript lover, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
+            content="Open Sourcerer, JavaScript Developer, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
+          <meta name="theme-color" content="#673ab7"/>
         </Head>
-        <style dangerouslySetInnerHTML={{ __html: materialCss }} />        
+        <style dangerouslySetInnerHTML={{ __html: materialCss }} />
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
           h5 {
@@ -39,11 +54,28 @@ export default class extends PureComponent {
             margin-top: 0;
           }
 
+          .contact button {
+    background-color: #fff;
+    border: 0;
+    padding: 8px 20px;
+    color: #333;
+    font-size: 14px;
+    border-radius: 2px;
+    margin: 0 10px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    outline: none;
+  }
+
           .footer {
             background-color: #fff;
             padding: 20px;
             text-align: center;
             font-size: 16px;
+          }
+
+          .footer a {
+            color: #c53465;
           }
 
           .interests {
@@ -60,59 +92,41 @@ export default class extends PureComponent {
           <h1>Ritesh Kumar</h1>
           <h5>
             JavaScript lover, Senior Software Developer at{" "}
-            <a href="https://housing.com" target="_blank">
-              Housing.com
-            </a>{" "}
-            , Designer, Open Source enthusiast, Artist. Created{" "}
-            <a href="http://transform.now.sh" target="_blank">
-              Transform
-            </a>,
-            <a href="https://github.com/ritz078/embed-js" target="_blank">
-              {" "}
-              embed-js
-            </a>{" "}
-            and{" "}
-            <a href="https://snape.in" target="_blank">
-              snape
-            </a>
+            <a href="https://housing.com">Housing.com</a> , Designer, Open
+            Source enthusiast, Artist. Created{" "}
+            <a href="http://transform.now.sh">Transform</a>,
+            <a href="https://github.com/ritz078/embed-js"> embed-js</a> and{" "}
+            <a href="https://snape.in">snape</a>
           </h5>
 
           <div className="contact">
-            <a href="/resume" target="_blank">
+            <a href="/resume">
               <button>Resume</button>
             </a>
-            <a href="mailto:rkritesh078@gmail.com" target="_blank">
+            <a href="mailto:rkritesh078@gmail.com">
               <button>Contact</button>
             </a>
           </div>
-          <div className="social-home">
-            <a
-              className="mdl-button mdl-js-button mdl-button--fab"
-              target="_blank"
-              href="https://github.com/ritz078"
-            >
-              <i className="fa fa-github" />
+          <div className="social-home" aria-hidden="true">
+            <a href="https://github.com/ritz078">
+              <button className="mdl-button mdl-js-button mdl-button--fab">
+                <i className="fa fa-github" />
+              </button>
             </a>
-            <a
-              className="mdl-button mdl-js-button mdl-button--fab"
-              target="_blank"
-              href="https://twitter.com/ritz078"
-            >
-              <i className="fa fa-twitter" />
+            <a href="https://twitter.com/ritz078">
+              <button className="mdl-button mdl-js-button mdl-button--fab">
+                <i className="fa fa-twitter" />
+              </button>
             </a>
-            <a
-              className="mdl-button mdl-js-button mdl-button--fab"
-              target="_blank"
-              href="https://www.linkedin.com/in/ritz078"
-            >
-              <i className="fa fa-linkedin" />
+            <a href="https://www.linkedin.com/in/ritz078">
+              <button className="mdl-button mdl-js-button mdl-button--fab">
+                <i className="fa fa-linkedin" />
+              </button>
             </a>
-            <a
-              className="mdl-button mdl-js-button mdl-button--fab"
-              target="_blank"
-              href="https://medium.com/@ritz078"
-            >
-              <i className="fa fa-medium" />
+            <a href="https://medium.com/@ritz078">
+              <button className="mdl-button mdl-js-button mdl-button--fab">
+                <i className="fa fa-medium" />
+              </button>
             </a>
           </div>
         </div>

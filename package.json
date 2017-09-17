@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "start": "next start",
-    "build": "next build && next export -o personal-web",
+    "build": "next build",
     "deploy": "npm run build && cd personal-web && now",
     "format": "prettier --write 'pages/*.js' 'components/*.js'"
   },

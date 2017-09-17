@@ -77,7 +77,7 @@ export default function() {
           background-color: #f6f6f6;
         }
       `}</style>
-      <h4>Latest Open Source Projects</h4>
+      <h4 id="open-source">Latest Open Source Projects</h4>
       <div className="screenshots">
         {screenshots.map(s => (
           <div className="demo-card-square mdl-card mdl-shadow--2dp" key={s.id}>
@@ -102,16 +102,16 @@ export default function() {
               <b>{s.id}</b> - {s.text}
             </div>
             <div className="mdl-card__actions mdl-card--border">
-              <a
-                href={s.url}
-                target="_blank"
-                className="mdl-button mdl-button--colored"
-              >
+              <a href={s.url} className="mdl-button mdl-button--colored">
                 {s.subtext}
               </a>
 
-              <a href={s.source} className="source" target="_blank">
-                <button className="mdl-button mdl-js-button mdl-button--icon">
+              <a href={s.source} className="source">
+                <button
+                  aria-label="Source Code"
+                  aria-labelledby="open-source"
+                  className="mdl-button mdl-js-button mdl-button--icon"
+                >
                   <i className="fa fa-code" />
                 </button>
               </a>

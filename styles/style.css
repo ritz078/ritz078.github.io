@@ -29,19 +29,6 @@ html {
     color: #fff;
   }
 
-  button {
-    background-color: #2196F3;
-    border: 0;
-    padding: 8px 20px;
-    color: #fff;
-    font-size: 14px;
-    border-radius: 2px;
-    margin: 0 10px;
-    margin-bottom: 40px;
-    cursor: pointer;
-    outline: none;
-  }
-
   button:hover {
     background-color: #2398f5;
   }

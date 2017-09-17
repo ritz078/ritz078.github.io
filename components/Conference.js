@@ -56,7 +56,7 @@ export default class extends PureComponent {
           }
 
           h6 {
-            color: #777;
+            color: #666;
             margin-bottom: 0;
           }
 
