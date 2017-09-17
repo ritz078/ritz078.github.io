@@ -1,5 +1,4 @@
 @import url("https://code.getmdl.io/1.3.0/material.indigo-pink.min.css");
-@import url("https://cdn.plyr.io/2.0.13/plyr.css");
 @import "./base";
 
 h1, h2, h3, h4, h5, h6 {
@@ -124,4 +123,8 @@ body.ReactModal__Body--open {
 .mdl-list__item--three-line .mdl-list__item-text-body {
     color: #fff;
     margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
 }

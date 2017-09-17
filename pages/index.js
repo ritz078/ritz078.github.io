@@ -119,10 +119,10 @@ export default class extends PureComponent {
         <FeaturedOSS />
         <Writing />
         <div className="interests">
-          <h2>👨‍💻 &middot; 👨‍🎨 &middot; 🎹 &middot; ✍ &middot; 🎮</h2>
+          <h2>👨‍💻 &middot; 👨‍🎨 &middot; 🎹 &middot; 🎮</h2>
         </div>
         <div className="footer">
-          Made by <a href="">Ritesh Kumar</a>
+          Made by <a href="https://twitter.com/ritz078">Ritesh Kumar</a>
         </div>
       </div>
     );

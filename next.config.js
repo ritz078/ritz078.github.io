@@ -22,6 +22,22 @@ module.exports = {
         'react': 'preact-compat/dist/preact-compat',
         'react-dom': 'preact-compat/dist/preact-compat'
       }
+
+      config.plugins.push(
+        new SWPrecacheWebpackPlugin({
+          minify: true,
+          staticFileGlobsIgnorePatterns: [/\.next\//],
+          staticFileGlobs: [
+            'static/**/*' // Precache all static files by default
+          ],
+          runtimeCaching: [
+            {
+              handler: "networkFirst",
+              urlPattern: /^https?.*/
+            }
+          ]
+        })
+      )
     }
 
     return config

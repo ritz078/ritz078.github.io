@@ -2,11 +2,6 @@ import React, { PureComponent } from "react";
 import isBrowser from "is-in-browser";
 import Modal from "react-modal";
 
-let plyr;
-if (isBrowser) {
-  plyr = require("plyr");
-}
-
 export default class extends PureComponent {
   state = {
     showModal: false
@@ -78,6 +73,7 @@ export default class extends PureComponent {
             font-size: 30px;
             color: #fff;
             cursor: pointer;
+            background-color: #673ab7;
           }
 
           .conference-img:hover {
