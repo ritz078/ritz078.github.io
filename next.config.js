@@ -1,4 +1,5 @@
 const glob = require('glob')
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
 
 module.exports = {
   webpack: (config, { dev }) => {

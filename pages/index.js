@@ -5,7 +5,7 @@ import stylesheet from "styles/style.css";
 import FeaturedOSS from "../components/FeaturedOSS";
 import Conference from "../components/Conference";
 import Writing from "../components/Writing";
-import "material-design-lite/material.css";
+import materialCss from "material-design-lite/material.css";
 
 export default class extends PureComponent {
   render() {
@@ -25,6 +25,7 @@ export default class extends PureComponent {
             content="JavaScript lover, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
         </Head>
+        <style dangerouslySetInnerHTML={{ __html: materialCss }} />        
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
           h5 {
