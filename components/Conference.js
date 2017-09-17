@@ -134,7 +134,7 @@ export default class extends PureComponent {
             </h6>
           </div>
         </div>
-        <Modal isOpen={this.state.showModal} style={style}>
+        <Modal isOpen={this.state.showModal} style={style} contentLabel="Conference">
           <i className="fa fa-close" onClick={this.closeModal} />
           <div className="yt-wrapper">
             <iframe

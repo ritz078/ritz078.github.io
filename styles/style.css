@@ -114,3 +114,23 @@ body.ReactModal__Body--open {
 a {
     text-decoration: none;
 }
+
+
+.rs-img{
+    height: 100%;
+    background: no-repeat center;
+    background-size: cover;
+    float: left;
+    opacity: 0.6;
+    width: 100%;
+    will-change: opacity;
+    transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+  }
+  
+  .rs-loaded{
+    opacity: 1;
+    background-size: contain;
+  }

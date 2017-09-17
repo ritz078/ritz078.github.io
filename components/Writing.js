@@ -128,7 +128,7 @@ export default class extends PureComponent {
           </div>
           <div className="blog-right">
             {blogs.map(b => (
-              <div>
+              <div key={b.url}>
                 <a href={b.url} target="_blank" rel="noopener">
                   <h5>{b.label}</h5>
                 </a>

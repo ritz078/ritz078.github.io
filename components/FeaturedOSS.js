@@ -1,5 +1,7 @@
-import { ProgressiveImage } from "react-progressive-image-loading";
+import React, {PureComponent} from 'react'
+import { findDOMNode } from 'react-dom'
 import isBrowser from "is-in-browser";
+import Image from '../components/Image'
 
 const screenshots = [
   {
@@ -55,7 +57,30 @@ const screenshots = [
   }
 ];
 
-export default function() {
+
+export default class extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.refs = {}
+  }
+
+  componentDidMount () {
+    if (window.IntersectionObserver) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            const id = entry.target.getAttribute('data-id')
+            this[`${id}-ref`].load()
+            io.unobserve(entry.target)
+          }
+        })
+      })
+  
+      screenshots.forEach(s => io.observe(findDOMNode(this[`${s.id}-ref`])))
+    }
+  }
+
+  render () {
   return (
     <div className="oss-wrapper">
       <style jsx>{`
@@ -82,20 +107,13 @@ export default function() {
         {screenshots.map(s => (
           <div className="demo-card-square mdl-card mdl-shadow--2dp" key={s.id}>
             <div className="screenshot-img">
-              {isBrowser && (
-                <ProgressiveImage
-                  preview={`/static/thumbs/${s.id}.png`}
-                  src={`/static/${s.id}.png`}
-                  render={(src, style) => (
-                    <div
-                      style={Object.assign(style, {
-                        backgroundImage: `url(${src})`,
-                        backgroundColor: s.color
-                      })}
-                    />
-                  )}
+                <Image
+                  defaultImage={`/static/thumbs/${s.id}.png`}
+                  image={`/static/${s.id}.png`}
+                  ref={node => this[`${s.id}-ref`] = node}
+                  id={s.id}
+                  color={s.color}
                 />
-              )}
             </div>
 
             <div className="mdl-card__supporting-text">
@@ -126,4 +144,5 @@ export default function() {
       </a>
     </div>
   );
+}
 }

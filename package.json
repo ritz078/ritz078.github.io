@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "start": "next start",
-    "build": "next build",
+    "build": "next build && next export -o personal-web && cp ./.next/service-worker.js ./personal-web/service-worker.js",
     "deploy": "npm run build && cd personal-web && now",
     "format": "prettier --write 'pages/*.js' 'components/*.js'"
   },
@@ -22,6 +22,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-github-corner": "^1.0.0",
+    "react-lazy-card": "^0.1.5",
     "react-modal": "^2.3.2",
     "react-progressive-image-loading": "^3.0.2"
   },
