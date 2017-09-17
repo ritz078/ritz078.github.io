@@ -64,8 +64,20 @@ export default function() {
           margin-bottom: 30px;
           color: #fff;
         }
+
+        .see-all {
+          background-color: #fff;
+          margin: 0 auto;
+          align-self: center;
+          display: flex;
+          margin-top: 40px;
+        }
+
+        .see-all:hover {
+          background-color: #f6f6f6;
+        }
       `}</style>
-      <h4>Open Source Projects</h4>
+      <h4>Latest Open Source Projects</h4>
       <div className="screenshots">
         {screenshots.map(s => (
           <div className="demo-card-square mdl-card mdl-shadow--2dp" key={s.id}>
@@ -107,6 +119,11 @@ export default function() {
           </div>
         ))}
       </div>
+      <a href="https://github.com/search?utf8=%E2%9C%93&q=user%3Aritz078+user%3Atransform-it+user%3Ahousinghq&type=Repositories&ref=advsearch&l=&l=">
+        <button className="see-all mdl-button mdl-js-button mdl-button--raised">
+          View All Projects
+        </button>
+      </a>
     </div>
   );
 }

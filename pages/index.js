@@ -43,7 +43,16 @@ export default class extends PureComponent {
             padding: 20px;
             text-align: center;
             font-size: 16px;
-            border-top: 1px solid #e6e6e6;
+          }
+
+          .interests {
+            padding: 40px 0;
+            background-color: rgba(0, 0, 0, 0.8);
+          }
+
+          h2 {
+            color: #fff;
+            text-align: center;
           }
         `}</style>
         <div className="banner">
@@ -109,6 +118,9 @@ export default class extends PureComponent {
         <Conference />
         <FeaturedOSS />
         <Writing />
+        <div className="interests">
+          <h2>👨‍💻 &middot; 👨‍🎨 &middot; 🎹 &middot; ✍ &middot; 🎮</h2>
+        </div>
         <div className="footer">
           Made by <a href="">Ritesh Kumar</a>
         </div>

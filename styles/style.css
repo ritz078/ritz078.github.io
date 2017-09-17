@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 html {
-    background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=');
+    background-image: url('./static/cover.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -82,7 +82,7 @@ html {
 .oss-wrapper {
     background-color: #673AB7;
     padding-top: 30px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 }
 
 .mdl-card__supporting-text {
