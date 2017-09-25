@@ -12,9 +12,9 @@ const experience = [
     label: "Housing.com | Senior Software Developer",
     timeline: "June 2015 - Present",
     content: [
-      "Housing Go - Development of a PWA from scratch which involved preact, redux, architecture setup and Server Side Rendering.",
-      "Housing Partner - Created a dashboard used by brokers and owners developed with Angular 2 and ngrx.",
-      "Housing App - A cross platform app developed using React-Native. Involved Redux, Observables, Immutable.js"
+      "<a href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
+      "<a href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
+      "Housing Partner - Created a dashboard used by brokers and owners using Angular 2 and ngrx.",
     ]
   }
 ];
@@ -207,8 +207,6 @@ export default class extends PureComponent {
             margin-left: 10px;
             vertical-align: middle;
             font-size: 16px;
-            float: right;
-            margin-top: 5px;
           }
 
           .download {
@@ -264,7 +262,7 @@ export default class extends PureComponent {
                   </div>
                   <div className="subtitle">{e.timeline}</div>
                   <div className="content">
-                    <ul>{e.content.map(c => <li>{c}</li>)}</ul>
+                    <ul>{e.content.map(c => <li dangerouslySetInnerHTML={{__html: c}}></li>)}</ul>
                   </div>
                 </div>
               ))}
@@ -369,8 +367,8 @@ export default class extends PureComponent {
             <h3>Skills</h3>
             <div className="content">
               JavaScript, HTML, CSS <br />
-              React, Redux, React Native, Angular 2 <br />
-              Git, macOS
+              React, Redux, React Native, Angular 1/2 <br />
+              Git
             </div>
           </div>
 
