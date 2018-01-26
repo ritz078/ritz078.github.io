@@ -131,3 +131,7 @@ a {
     opacity: 1;
     background-size: contain;
   }
+
+.mdl-button {
+    font-family: inherit;
+}

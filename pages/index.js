@@ -37,7 +37,7 @@ export default class extends PureComponent {
           />
           <meta
             name="description"
-            content="Open Sourcerer, JavaScript Developer, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
+            content="Open Sourcerer, JavaScript Developer, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
           <meta name="theme-color" content="#673ab7" />
         </Head>
@@ -92,9 +92,8 @@ export default class extends PureComponent {
         <div className="banner">
           <h1>Ritesh Kumar</h1>
           <h5>
-            JavaScript lover, Senior Software Developer at{" "}
-            <a href="https://housing.com">Housing.com</a> , Designer, Open
-            Source enthusiast, Artist. Created{" "}
+            JavaScript lover, Lead SDE @ <a href="https://anarock.com">Anarock</a>, ex <a href="https://housing.com">Housing.com</a> ,
+            Designer, Open Source enthusiast, Artist. Created{" "}
             <a href="http://transform.now.sh">Transform</a>,
             <a href="https://github.com/ritz078/embed-js"> embed-js</a> and{" "}
             <a href="https://snape.in">snape</a>

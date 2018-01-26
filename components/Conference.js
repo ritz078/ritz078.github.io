@@ -53,12 +53,13 @@ export default class extends PureComponent {
 
           h5 {
             color: #333;
-            margin-top: 10px;
+            margin-top: 0px;
           }
 
           h6 {
             color: #666;
             margin-bottom: 0;
+            margin-top: 10px;
           }
 
           .conference-img {

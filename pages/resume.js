@@ -8,13 +8,22 @@ const colors = {
 
 const experience = [
   {
+    url: "https://anarock.com",
+    label: "Anarock | Lead Software Developer",
+    timeline: "Oct 2017 - Present",
+    content: [
+      "Involved in the initial team building.",
+      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - An android only app built using React Native for agents. It involved offline transactions, observable and redux."
+    ]
+  },
+  {
     url: "https://housing.com",
     label: "Housing.com | Senior Software Developer",
-    timeline: "June 2015 - Present",
+    timeline: "June 2015 - Oct 2017",
     content: [
-      "<a href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
-      "<a href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
-      "Housing Partner - Created a dashboard used by brokers and owners using Angular 2 and ngrx.",
+      "<a target='_blank' href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
+      "<a target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
+      "Housing Partner - Created a dashboard used by brokers and owners using Angular 2 and ngrx."
     ]
   }
 ];
@@ -91,7 +100,7 @@ export default class extends PureComponent {
         </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
-          @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+          @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
           .wrapper {
             background-color: #666;
@@ -152,7 +161,7 @@ export default class extends PureComponent {
           }
 
           .mb30 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
           }
 
           .title {
@@ -238,6 +247,10 @@ export default class extends PureComponent {
           .download:hover {
             box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
           }
+
+          .mb20 {
+            margin-bottom: 25px;
+          }
         `}</style>
         <div className="resume-wrapper">
           <div className="left">
@@ -253,8 +266,13 @@ export default class extends PureComponent {
 
             <h3>Experience</h3>
             <div className="section-wrapper">
-              {experience.map(e => (
-                <div key={e.url} className="experience">
+              {experience.map((e, i) => (
+                <div
+                  key={e.url}
+                  className={`experience ${
+                    i !== experience.length - 1 ? "mb20" : ""
+                  }`}
+                >
                   <div className="title">
                     <a href={e.url} target="_blank">
                       {e.label}
@@ -262,7 +280,11 @@ export default class extends PureComponent {
                   </div>
                   <div className="subtitle">{e.timeline}</div>
                   <div className="content">
-                    <ul>{e.content.map(c => <li dangerouslySetInnerHTML={{__html: c}}></li>)}</ul>
+                    <ul>
+                      {e.content.map(c => (
+                        <li dangerouslySetInnerHTML={{ __html: c }} />
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
@@ -291,7 +313,7 @@ export default class extends PureComponent {
               ))}
             </div>
 
-            <h3>Conference</h3>
+            <h3>Conference Talk</h3>
             <div className="section-wrapper">
               <div className="content">
                 <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
@@ -300,24 +322,6 @@ export default class extends PureComponent {
                 - Spoke about the development process and performance
                 optimisations we did to improve our mobile experience.
               </div>
-            </div>
-
-            <h3>
-              Blogs
-              <a href="https://medium.com/@ritz078">
-                <i className="fa fa-external-link see-more" />
-              </a>
-            </h3>
-            <div className="section-wrapper">
-              {blogs.map(e => (
-                <div key={e.url} className="experience">
-                  <div className="subtitle">
-                    <a href={e.url}>
-                      <b>{e.label}</b>
-                    </a>
-                  </div>
-                </div>
-              ))}
             </div>
 
             <h3>Education</h3>
@@ -337,6 +341,9 @@ export default class extends PureComponent {
           </div>
           <div className="right">
             <div className="social mb30">
+              <a target="_blank" href="https://github.com/ritz078">
+                <i className="fa fa-github" />
+              </a>
               <a target="_blank" href="https://twitter.com/ritz078">
                 <i className="fa fa-twitter" />
               </a>

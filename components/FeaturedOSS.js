@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import { findDOMNode } from "react-dom";
-import isBrowser from "is-in-browser";
 import Image from "../components/Image";
 import { Github } from "../components/Svgs";
 
