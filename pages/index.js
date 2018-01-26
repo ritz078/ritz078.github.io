@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import Link from "next/link";
 import Head from "next/head";
 import stylesheet from "styles/style.css";
 import FeaturedOSS from "../components/FeaturedOSS";

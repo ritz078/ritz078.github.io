@@ -1,8 +1,13 @@
 const glob = require('glob')
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const BabiliPlugin = require("babili-webpack-plugin");
 
 module.exports = {
   webpack: (config, { dev }) => {
+    config.plugins = config.plugins.filter(
+      plugin => plugin.constructor.name !== "UglifyJsPlugin"
+    );
+
     config.module.rules.push(
       {
         test: /\.(css|scss)/,
@@ -23,6 +28,8 @@ module.exports = {
         'react': 'preact-compat/dist/preact-compat',
         'react-dom': 'preact-compat/dist/preact-compat'
       }
+
+      config.plugins.push(new BabiliPlugin());
 
       config.plugins.push(
         new SWPrecacheWebpackPlugin({
