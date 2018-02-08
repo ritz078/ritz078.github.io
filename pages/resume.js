@@ -13,7 +13,7 @@ const experience = [
     timeline: "Oct 2017 - Present",
     content: [
       "Involved in the initial team building.",
-      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - An android only app built using React Native for agents. It involved offline transactions, observable and redux."
+      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - An android only app built using React Native for agents. I was involved in the development of the app from start to release."
     ]
   },
   {
@@ -61,7 +61,7 @@ const oss = [
     url: "https://github.com/ritz078/embed-js",
     label: "embed-js",
     desc:
-      "A plugin to embed emojis, media, maps, tweets, code and more. Its modular, customizable and plugin based."
+      "A plugin to embed emojis, media, maps, tweets, code and more. It is modular, customizable and plugin based."
   },
   {
     url: "https://github.com/ritz078/starring",
@@ -176,6 +176,7 @@ export default class extends PureComponent {
 
           a {
             color: #1565c0;
+            text-decoration: none;
           }
 
           a:hover {
@@ -282,7 +283,7 @@ export default class extends PureComponent {
                   <div className="content">
                     <ul>
                       {e.content.map(c => (
-                        <li dangerouslySetInnerHTML={{ __html: c }} />
+                        <li key={c} dangerouslySetInnerHTML={{ __html: c }} />
                       ))}
                     </ul>
                   </div>
@@ -382,7 +383,7 @@ export default class extends PureComponent {
           <a
             className="download"
             href="/static/Ritesh_Kumar_Resume.pdf"
-            download
+            download="Ritesh_Kumar_Resume"
           >
             <button className="fa fa-download" />
           </a>

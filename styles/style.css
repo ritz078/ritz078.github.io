@@ -135,3 +135,7 @@ a {
 .mdl-button {
     font-family: inherit;
 }
+
+.resume-wrapper a {
+    text-decoration: none;
+}
