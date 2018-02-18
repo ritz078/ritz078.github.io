@@ -37,19 +37,6 @@ const education = [
   }
 ];
 
-const blogs = [
-  {
-    url:
-      "https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454",
-    label: "Housing Go - Behind the Screens"
-  },
-  {
-    url:
-      "https://medium.com/@ritz078/block-formatting-contexts-in-css-3a9555355019",
-    label: "Block Formatting Contexts in CSS"
-  }
-];
-
 const oss = [
   {
     url: "https://github.com/transform-it",
@@ -314,7 +301,7 @@ export default class extends PureComponent {
               ))}
             </div>
 
-            <h3>Conference Talk</h3>
+            <h3>Conference/Meetup Talks</h3>
             <div className="section-wrapper">
               <div className="content">
                 <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
@@ -322,6 +309,13 @@ export default class extends PureComponent {
                 </a>{" "}
                 - Spoke about the development process and performance
                 optimisations we did to improve our mobile experience.
+              </div>
+
+              <div className="content">
+                <a href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js" target="_blank">
+                  <b>The hidden and new parts of JS</b>
+                </a>{" "}
+                - This talk involves array-like objects, DI, .sort(), let/const, async/await and some ES2018 features.
               </div>
             </div>
 
