@@ -62,7 +62,7 @@ export default class extends PureComponent {
             justify-content: center;
             align-items: center;
             display: flex;
-            flex: 2;
+            flex: 1.5;
             border-right: 1px solid #e6e6e6;
           }
 
@@ -131,7 +131,7 @@ export default class extends PureComponent {
           }
 
           .blog-left svg {
-            height: 84px;
+            height: 160px;
           }
         `}</style>
         <div className="blog-wrapper">

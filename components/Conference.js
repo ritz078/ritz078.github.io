@@ -40,14 +40,11 @@ export default class extends PureComponent {
           .conf-wrapper {
             background-color: #fff;
             position: relative;
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-              0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
           }
 
           .conference {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
             display: flex;
           }
 
@@ -57,9 +54,11 @@ export default class extends PureComponent {
           }
 
           h6 {
-            color: #666;
+            color: #777;
             margin-bottom: 0;
             margin-top: -7px;
+            font-size: 15px;
+            line-height: 22px;
           }
 
           .conference-img {
@@ -68,7 +67,6 @@ export default class extends PureComponent {
             width: 200px;
             background-size: cover;
             background-position: center;
-            border-radius: 2px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -83,7 +81,7 @@ export default class extends PureComponent {
           }
 
           .conference-info {
-            padding: 0 20px;
+            padding:15px;
             flex: 1;
           }
 
