@@ -114,7 +114,7 @@ export default class extends PureComponent {
             }
 
             .conference-info {
-              padding: 20px 0 0 0;
+              padding: 20px;
             }
             .conference-img {
               width: 100%;
