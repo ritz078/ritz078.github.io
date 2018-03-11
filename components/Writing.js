@@ -76,11 +76,12 @@ export default class extends PureComponent {
           }
 
           h5 {
-            margin: 20px 0;
-            color: #666;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+            margin: 9px 0;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 32px;
           }
 
           a:hover {

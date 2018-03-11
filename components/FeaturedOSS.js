@@ -49,7 +49,7 @@ const screenshots = [
   },
   {
     id: "react-controls",
-    text: "Switch, Radio and Checkbox in React and optimized for mobile.",
+    text: "Switch, Radio and Checkbox in React. Optimized for mobile.",
     subtext: "demo",
     url: "https://housinghq.github.io/react-controls",
     color: "#ECEFF4",

@@ -59,7 +59,7 @@ export default class extends PureComponent {
           h6 {
             color: #666;
             margin-bottom: 0;
-            margin-top: 10px;
+            margin-top: -7px;
           }
 
           .conference-img {

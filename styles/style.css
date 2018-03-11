@@ -12,6 +12,13 @@ html {
     background-color: #000;
 }
 
+body {
+    background-image: url("/static/download.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
 .banner {
     display: flex;
     flex: 1;
@@ -22,7 +29,7 @@ html {
     height: 100vh;
     min-height: 600px;
     padding: 0 40px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.85);
     color: #fff;
   }
 
@@ -69,6 +76,7 @@ html {
 
 .mdl-card__supporting-text {
     width: 100%;
+    line-height: 20px;
 }
 
 .mdl-card__actions .source {
