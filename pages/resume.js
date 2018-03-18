@@ -1,6 +1,7 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
 import stylesheet from "styles/base.css";
+import Link from "next/link";
 
 const colors = {
   primary: "#e05588"
@@ -45,20 +46,16 @@ const oss = [
       "An <a href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a href='https://github.com/transform-it'>tranform-it</a>."
   },
   {
+    url: "https://github.com/storybooks/storybook",
+    label: "storybook",
+    desc:
+      "Storybook is a development environment for UI components. I was an early contributor to the project. "
+  },
+  {
     url: "https://github.com/ritz078/embed-js",
     label: "embed-js",
     desc:
       "A plugin to embed emojis, media, maps, tweets, code and more. It is modular, customizable and plugin based."
-  },
-  {
-    url: "https://github.com/ritz078/starring",
-    label: "Starring",
-    desc: "A CLI to automatically star the used npm-packages on GitHub."
-  },
-  {
-    url: "https://github.com/ritz078/emoji-assistant",
-    label: "emoji-assistant",
-    desc: "A chrome extension to autosuggest emojis on the web."
   },
   {
     url: "https://snape.in",
@@ -69,7 +66,12 @@ const oss = [
 
 export default class extends PureComponent {
   render() {
-    return (
+    return [
+      <Link prefetch href="/">
+        <a className="back">
+          <i className="fa fa-angle-left" />Back to Home
+        </a>
+      </Link>,
       <div className="wrapper">
         <Head>
           <title>Resume | Ritesh Kumar</title>
@@ -87,8 +89,6 @@ export default class extends PureComponent {
         </Head>
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
-          @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-
           .wrapper {
             background-color: #666;
             min-height: 100vh;
@@ -149,10 +149,6 @@ export default class extends PureComponent {
 
           .mb30 {
             margin-bottom: 20px;
-          }
-
-          .title {
-            font-weight: bold;
           }
 
           .subtitle {
@@ -284,14 +280,12 @@ export default class extends PureComponent {
                 <i className="fa fa-external-link see-more" />
               </a>
             </h3>
-            <div className="section-wrapper">
+            <div className="section-wrapper oss">
               {oss.map(e => (
                 <div key={e.url} className="experience">
-                  <b>
-                    <a href={e.url} target="_blank">
-                      {e.label}
-                    </a>
-                  </b>{" "}
+                  <a href={e.url} target="_blank">
+                    {e.label}
+                  </a>{" "}
                   -{" "}
                   <span
                     className="content"
@@ -305,17 +299,21 @@ export default class extends PureComponent {
             <div className="section-wrapper">
               <div className="content">
                 <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
-                  <b>Chrome Developers Summit 2016</b>
+                  Chrome Developers Summit 2016
                 </a>{" "}
                 - Spoke about the development process and performance
                 optimisations we did to improve our mobile experience.
               </div>
 
               <div className="content">
-                <a href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js" target="_blank">
-                  <b>The hidden and new parts of JS</b>
+                <a
+                  href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js"
+                  target="_blank"
+                >
+                  The hidden and new parts of JS
                 </a>{" "}
-                - This talk involves array-like objects, DI, .sort(), let/const, async/await and some ES2018 features.
+                - This talk involves array-like objects, DI, .sort(), let/const,
+                async/await and some ES2018 features.
               </div>
             </div>
 
@@ -383,6 +381,6 @@ export default class extends PureComponent {
           </a>
         </div>
       </div>
-    );
+    ];
   }
 }

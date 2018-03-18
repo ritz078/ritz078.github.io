@@ -1,5 +1,4 @@
 import React, { PureComponent } from "react";
-import isBrowser from "is-in-browser";
 import Modal from "react-modal";
 import { Play } from "../components/Svgs";
 
@@ -30,7 +29,8 @@ export default class extends PureComponent {
         background: "rgba(0, 0, 0, 0.85)",
         border: 0,
         padding: 0,
-        display: "flex"
+        display: "flex",
+        borderRadius: 0
       }
     };
 
@@ -81,8 +81,17 @@ export default class extends PureComponent {
           }
 
           .conference-info {
-            padding:15px;
+            padding: 15px;
             flex: 1;
+          }
+
+          .fa-times-circle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
           }
 
           .close {
@@ -99,7 +108,7 @@ export default class extends PureComponent {
             justify-content: center;
             align-items: center;
             display: flex;
-            max-width: 711px;
+            max-width: 900px;
             margin: 0 auto;
           }
 
@@ -150,12 +159,10 @@ export default class extends PureComponent {
           style={style}
           contentLabel="Conference"
         >
-          <i className="close" onClick={this.closeModal}>
-            &times;
-          </i>
+          <i className="fa fa-times-circle" onClick={this.closeModal} />
           <div className="yt-wrapper">
             <iframe
-              height="400"
+              height="500"
               src="https://www.youtube.com/embed/KSWSs9UsNpc?rel=0&amp;showinfo=0&amp;start=206"
               frameborder="0"
               allowfullscreen

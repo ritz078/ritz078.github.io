@@ -6,6 +6,34 @@ import Conference from "../components/Conference";
 import Writing from "../components/Writing";
 import { Github, Twitter, LinkedIn, Medium } from "../components/Svgs";
 import materialCss from "material-design-lite/material.css";
+import Talks from "../components/Talks";
+
+function Contact() {
+  return (
+    <div className="social-home" aria-hidden="true">
+      <a href="https://github.com/ritz078">
+        <button className="mdl-button mdl-js-button mdl-button--fab">
+          <Github />
+        </button>
+      </a>
+      <a href="https://twitter.com/ritz078">
+        <button className="mdl-button mdl-js-button mdl-button--fab">
+          <Twitter />
+        </button>
+      </a>
+      <a href="https://www.linkedin.com/in/ritz078">
+        <button className="mdl-button mdl-js-button mdl-button--fab">
+          <LinkedIn />
+        </button>
+      </a>
+      <a href="https://medium.com/@ritz078">
+        <button className="mdl-button mdl-js-button mdl-button--fab">
+          <Medium />
+        </button>
+      </a>
+    </div>
+  )
+}
 
 export default class extends PureComponent {
   componentDidMount() {
@@ -87,12 +115,22 @@ export default class extends PureComponent {
             color: #fff;
             text-align: center;
           }
+
+          .contact-me {
+            height: 120px;
+            background-color: #E91E63;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+          }
         `}</style>
         <div className="banner">
           <h1>Ritesh Kumar</h1>
           <h5>
-            JavaScript lover, Lead SDE @ <a href="https://anarock.com">Anarock</a>, ex <a href="https://housing.com">Housing.com</a> ,
-            Designer, Open Source enthusiast, Artist. Created{" "}
+            JavaScript lover, Lead SDE @{" "}
+            <a href="https://anarock.com">Anarock</a>, ex{" "}
+            <a href="https://housing.com">Housing.com</a> , Designer, Open
+            Source enthusiast, Artist. Created{" "}
             <a href="http://transform.now.sh">Transform</a>,
             <a href="https://github.com/ritz078/embed-js"> embed-js</a> and{" "}
             <a href="https://snape.in">snape</a>
@@ -106,31 +144,14 @@ export default class extends PureComponent {
               <button>Contact</button>
             </a>
           </div>
-          <div className="social-home" aria-hidden="true">
-            <a href="https://github.com/ritz078">
-              <button className="mdl-button mdl-js-button mdl-button--fab">
-                <Github />
-              </button>
-            </a>
-            <a href="https://twitter.com/ritz078">
-              <button className="mdl-button mdl-js-button mdl-button--fab">
-                <Twitter />
-              </button>
-            </a>
-            <a href="https://www.linkedin.com/in/ritz078">
-              <button className="mdl-button mdl-js-button mdl-button--fab">
-                <LinkedIn />
-              </button>
-            </a>
-            <a href="https://medium.com/@ritz078">
-              <button className="mdl-button mdl-js-button mdl-button--fab">
-                <Medium />
-              </button>
-            </a>
-          </div>
+          <Contact />
         </div>
         <Conference />
         <FeaturedOSS />
+        <Talks />
+        <div className="contact-me">
+          <Contact />
+        </div>
         <Writing />
         <div className="interests">
           <h2>👨‍💻 &middot; 👨‍🎨 &middot; 🎹 &middot; 🎮</h2>

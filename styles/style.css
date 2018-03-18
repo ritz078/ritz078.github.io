@@ -147,3 +147,24 @@ a {
 .resume-wrapper a {
     text-decoration: none;
 }
+
+.talks .mdl-list__item {
+    color: #222;
+}
+
+.talks .mdl-list__item--three-line .mdl-list__item-text-body {
+    color: #444;
+}
+
+.contact-me .mdl-button--fab{
+    background-color: transparent;
+}
+
+.contact-me .mdl-button--fab path {
+    fill: #fff !important;
+}
+
+.contact-me .mdl-button--fab svg {
+    margin-top: -4px;
+    height: 28px;
+}
