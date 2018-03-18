@@ -66,13 +66,12 @@ const oss = [
 
 export default class extends PureComponent {
   render() {
-    return [
+    return <div className="wrapper" key="content">
       <Link prefetch href="/" key="link">
         <a className="back">
           <i className="fa fa-angle-left" />Back to Home
         </a>
-      </Link>,
-      <div className="wrapper" key="content">
+      </Link>
         <Head>
           <title>Resume | Ritesh Kumar</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -381,6 +380,5 @@ export default class extends PureComponent {
           </a>
         </div>
       </div>
-    ];
   }
 }

@@ -38,7 +38,7 @@
     position: fixed;
     display: inline-block;
     padding: 16px;
-    color: #fff;
+    color: #fff !important;
     transition: all .2s;
 }
 
