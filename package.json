@@ -10,7 +10,7 @@
     "build": "next build && next export -o personal-web && cp ./.next/service-worker.js ./personal-web/service-worker.js",
     "deploy": "npm run build && cd personal-web && now",
     "format": "prettier --write 'pages/*.js' 'components/*.js'",
-    "precommit": "node ./pdf.js && git add static/*"
+    "pdf": "node ./pdf.js && git add static/*"
   },
   "author": "",
   "license": "ISC",

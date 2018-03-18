@@ -105,7 +105,6 @@ export default function() {
 
                 <div className="mdl-list__item-text-body">{x.desc}</div>
               </div>
-
             </li>
           ))}
         </ul>

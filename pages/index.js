@@ -32,7 +32,7 @@ function Contact() {
         </button>
       </a>
     </div>
-  )
+  );
 }
 
 export default class extends PureComponent {
@@ -118,10 +118,10 @@ export default class extends PureComponent {
 
           .contact-me {
             height: 120px;
-            background-color: #E91E63;
+            background-color: #009688;
             display: flex;
-    justify-content: center;
-    align-items: center;
+            justify-content: center;
+            align-items: center;
           }
         `}</style>
         <div className="banner">
