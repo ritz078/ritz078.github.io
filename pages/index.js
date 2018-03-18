@@ -127,7 +127,7 @@ export default class extends PureComponent {
         <div className="banner">
           <h1>Ritesh Kumar</h1>
           <h5>
-            JavaScript lover, Lead SDE @{" "}
+            JavaScript Developer, Lead SDE @{" "}
             <a href="https://anarock.com">Anarock</a>, ex{" "}
             <a href="https://housing.com">Housing.com</a> , Designer, Open
             Source enthusiast, Artist. Created{" "}
