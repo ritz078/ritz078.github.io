@@ -2,6 +2,7 @@ import React, { PureComponent } from "react";
 import Head from "next/head";
 import stylesheet from "styles/base.css";
 import Link from "next/link";
+import materialCss from "material-design-lite/material.css";
 
 const colors = {
   primary: "#e05588"
@@ -69,7 +70,9 @@ export default class extends PureComponent {
     return <div className="wrapper" key="content">
       <Link prefetch href="/" key="link">
         <a className="back">
-          <i className="fa fa-angle-left" />Back to Home
+          <button className="mdl-button mdl-js-button mdl-button--primary">
+            <i className="fa fa-angle-left" />Back to Home
+          </button>
         </a>
       </Link>
         <Head>
@@ -91,6 +94,18 @@ export default class extends PureComponent {
           .wrapper {
             background-color: #666;
             min-height: 100vh;
+          }
+
+          .mdl-button {
+              padding: 8px;
+    border: 0;
+    border-radius: 2px;
+    color: ${colors.primary};
+    outline: none;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,0.2);
           }
 
           .name {
@@ -125,6 +140,7 @@ export default class extends PureComponent {
             padding: 40px;
             flex-direction: column;
             padding-right: 20px;
+            padding-bottom: 0;
           }
 
           .right {
@@ -141,9 +157,15 @@ export default class extends PureComponent {
           }
 
           .section-wrapper {
-            border-left: 2px solid #eee;
-            padding-left: 30px;
+            padding-left: 20px;
             margin-bottom: 30px;
+          }
+
+          @media screen and (max-width: 700px) {
+          .section-wrapper {
+            padding-left: 0;
+          }
+
           }
 
           .mb30 {
@@ -180,7 +202,7 @@ export default class extends PureComponent {
           }
 
           .info {
-            margin-bottom: 50px;
+            margin-bottom: 40px;
           }
 
           .designation,
@@ -279,9 +301,9 @@ export default class extends PureComponent {
                 <i className="fa fa-external-link see-more" />
               </a>
             </h3>
-            <div className="section-wrapper oss">
+            <ul className="section-wrapper oss">
               {oss.map(e => (
-                <div key={e.url} className="experience">
+                <li key={e.url} className="experience">
                   <a href={e.url} target="_blank">
                     {e.label}
                   </a>{" "}
@@ -290,30 +312,31 @@ export default class extends PureComponent {
                     className="content"
                     dangerouslySetInnerHTML={{ __html: e.desc }}
                   />
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
 
             <h3>Conference/Meetup Talks</h3>
             <div className="section-wrapper">
-              <div className="content">
-                <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
-                  Chrome Developers Summit 2016
-                </a>{" "}
-                - Spoke about the development process and performance
-                optimisations we did to improve our mobile experience.
-              </div>
-
-              <div className="content">
-                <a
-                  href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js"
-                  target="_blank"
-                >
-                  The hidden and new parts of JS
-                </a>{" "}
-                - This talk involves array-like objects, DI, .sort(), let/const,
-                async/await and some ES2018 features.
-              </div>
+              <ul className="content">
+                <li>
+                  <a href="https://youtu.be/KSWSs9UsNpc?t=3m26s" target="_blank">
+                    Chrome Developers Summit 2016
+                  </a>{" "}
+                  - Spoke about the development process and performance
+                  optimisations we did to improve our mobile experience.
+                </li>
+                <li>
+                  <a
+                    href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js"
+                    target="_blank"
+                  >
+                    The hidden and new parts of JS
+                  </a>{" "}
+                  - This talk involves array-like objects, DI, .sort(), let/const,
+                  async/await and some ES2018 features.
+                </li>
+              </ul>
             </div>
 
             <h3>Education</h3>
