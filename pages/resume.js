@@ -70,7 +70,7 @@ export default class extends PureComponent {
     return <div className="wrapper" key="content">
       <Link prefetch href="/" key="link">
         <a className="back">
-          <button className="mdl-button mdl-js-button mdl-button--primary">
+          <button className="mdl-button back-btn mdl-button--primary">
             <i className="fa fa-angle-left" />Back to Home
           </button>
         </a>
