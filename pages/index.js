@@ -67,6 +67,7 @@ export default class extends PureComponent {
             content="Open Sourcerer, JavaScript Developer, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
           <meta name="theme-color" content="#673ab7" />
+          <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script>
         </Head>
         <style dangerouslySetInnerHTML={{ __html: materialCss }} />
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />

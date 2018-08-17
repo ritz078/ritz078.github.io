@@ -14,6 +14,18 @@ const talks = [
     location: "Mumbai, India",
     desc:
       "This talk involves array-like objects, DI, .sort(), let/const, async/await and some ES2018 features."
+  },
+  {
+    title: "The current state of web",
+    url: "https://www.slideshare.net/RiteshKumar346/the-current-state-of-web",
+    location: "Mumbai, India",
+    desc: "A new set of new features available on the web like ResizeObserver, IntersectionObserver, variable fonts, immersive web etc."
+  },
+  {
+    title: "React Native: The Development Flow",
+    url: "https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600",
+    location: "Mumbai, India",
+    desc: "A talk about the whys and hows of debugging, performance optimizations and improved release cycles so that the next time you are developing a React Native application, you feel at home."
   }
 ];
 

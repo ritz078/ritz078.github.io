@@ -12,13 +12,6 @@ html {
     background-color: #000;
 }
 
-body {
-    background-image: url("/static/download.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
 .banner {
     display: flex;
     flex: 1;
@@ -29,7 +22,8 @@ body {
     height: 100vh;
     min-height: 600px;
     padding: 0 40px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85)),url("/static/download.jpg");
+    background-size:cover;
     color: #fff;
   }
 
@@ -95,7 +89,7 @@ body {
 }
 
 .social-home svg {
-    color: #fff;    
+    color: #fff;
     height: 32px;
 }
 
@@ -134,7 +128,7 @@ a {
     -moz-transition: opacity .3s;
     -o-transition: opacity .3s;
   }
-  
+
   .rs-loaded{
     opacity: 1;
     background-size: contain;
