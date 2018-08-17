@@ -14,8 +14,8 @@ const experience = [
     label: "Anarock | Lead Software Developer",
     timeline: "Oct 2017 - Present",
     content: [
-      "Involved in the initial team building.",
-      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - An android only app built using React Native for agents. I was involved in the development of the app from start to release."
+      "Developed the whole design system framework for web and React Native.",
+      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - An android only app built using React Native for agents. I am involved in the development from start."
     ]
   },
   {
@@ -328,13 +328,12 @@ export default class extends PureComponent {
                 </li>
                 <li>
                   <a
-                    href="https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js"
+                    href="https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600"
                     target="_blank"
                   >
-                    The hidden and new parts of JS
+                    React Native: The Development Flow
                   </a>{" "}
-                  - This talk involves array-like objects, DI, .sort(), let/const,
-                  async/await and some ES2018 features.
+                  - A talk about the whys and hows of debugging, performance optimizations and improved release cycles.
                 </li>
               </ul>
             </div>
@@ -390,6 +389,7 @@ export default class extends PureComponent {
             <div className="content">
               JavaScript, HTML, CSS <br />
               React, Redux, React Native, Angular 1/2 <br />
+              TypeScript, CoffeeScript<br />
               Git
             </div>
           </div>
