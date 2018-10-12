@@ -26,12 +26,17 @@ const talks = [
     url: "https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600",
     location: "Mumbai, India",
     desc: "A talk about the whys and hows of debugging, performance optimizations and improved release cycles so that the next time you are developing a React Native application, you feel at home."
+  },
+  {
+    title: "Web Workers: A graphical intro.",
+    location: "Bangalore, India",
+    desc: "This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI."
   }
 ];
 
 export default function() {
   return (
-    <div className="talks-wrapper">
+    <div className="talks-wrapper" id="talks">
       <style jsx>{`
         .talks-wrapper {
           padding: 20px;

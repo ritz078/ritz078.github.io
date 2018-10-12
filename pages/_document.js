@@ -12,12 +12,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang="en-us">
-        <Head>
-        </Head>
-        <body className="custom_class">
-          <Main />
-          <NextScript />
-        </body>
+      <Head>
+      </Head>
+      <body className="custom_class">
+      <Main />
+      <NextScript />
+      </body>
       </html>
     );
   }

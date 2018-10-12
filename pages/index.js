@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
-import stylesheet from "styles/style.css";
+import stylesheet from "../styles/style.css";
 import FeaturedOSS from "../components/FeaturedOSS";
 import Conference from "../components/Conference";
 import Writing from "../components/Writing";
@@ -36,24 +36,11 @@ function Contact() {
 }
 
 export default class extends PureComponent {
-  componentDidMount() {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/service-worker.js")
-        .then(registration => {
-          console.log("service worker registration successful");
-        })
-        .catch(err => {
-          console.warn("service worker registration failed");
-        });
-    }
-  }
-
   render() {
     return (
       <div>
         <Head>
-          <title>Ritesh Kumar | Frontend Developer</title>
+          <title>Ritesh Kumar | JavaScript Developer</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
           <link rel="manifest" href="/static/manifest.json" />
           <link
@@ -64,7 +51,7 @@ export default class extends PureComponent {
           />
           <meta
             name="description"
-            content="Open Sourcerer, JavaScript Developer, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
+            content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
           <meta name="theme-color" content="#673ab7" />
           <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script>

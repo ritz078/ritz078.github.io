@@ -35,8 +35,6 @@
 }
 
 .back {
-    position: fixed;
-    display: inline-block;
     padding: 7px 10px;
     color: #fff !important;
     cursor: pointer;
