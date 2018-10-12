@@ -213,7 +213,7 @@ export default class extends PureComponent {
             }
 
             .section-wrapper {
-              padding-left: 20px;
+              padding-left: 15px;
               margin-bottom: 30px;
             }
 
