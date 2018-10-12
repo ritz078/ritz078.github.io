@@ -117,7 +117,7 @@ export default class extends PureComponent {
             />
             <meta
               name="description"
-              content="JavaScript Developer, Senior Software Developer @ http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
+              content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
             />
           </Head>
           <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
