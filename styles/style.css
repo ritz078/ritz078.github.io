@@ -19,7 +19,7 @@ html {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    height: calc(100vh - 108px);
     min-height: 600px;
     padding: 0 40px;
     background:linear-gradient(0deg,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85)),url("/static/download.jpg");
