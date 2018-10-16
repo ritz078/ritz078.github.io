@@ -13,7 +13,9 @@ export default class extends PureComponent {
     });
   };
 
-  closeModal = () => {
+  closeModal = (e) => {
+    e.stopPropagation();
+
     this.setState({
       showModal: false
     });
@@ -35,26 +37,44 @@ export default class extends PureComponent {
     };
 
     return (
-      <div className="conf-wrapper">
+      <div className="conf-wrapper" onClick={this.openModal}>
         <style jsx>{`
           .conf-wrapper {
-            background-color: #fff;
+            background: linear-gradient(
+                to right top,
+                rgb(175, 78, 71),
+                rgb(97, 0, 173)
+              )
+              rgb(255, 255, 255);
             position: relative;
+            max-width: 600px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 0 auto;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
+                transform: translateY(-50%);
+                transition: all 200ms;
+          }
+
+          .conf-wrapper:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 14px 0px;
           }
 
           .conference {
             max-width: 800px;
             margin: 0 auto;
             display: flex;
+            align-items: center;
           }
 
           h5 {
-            color: #333;
+            color: #fff;
             margin-top: 0px;
           }
 
-          h6 {
-            color: #777;
+          h7 {
+            color: #fff;
             margin-bottom: 0;
             margin-top: -7px;
             font-size: 15px;
@@ -143,15 +163,15 @@ export default class extends PureComponent {
           }
         `}</style>
         <div className="conference">
-          <div className="conference-img" onClick={this.openModal}>
+          <div className="conference-img">
             <Play />
           </div>
           <div className="conference-info">
             <h5>Chrome Developer Summit 2016</h5>
-            <h6>
+            <h7>
               Spoke about the development process and performance optimisations
               we did to improve our mobile experience.
-            </h6>
+            </h7>
           </div>
         </div>
         <Modal
@@ -164,8 +184,8 @@ export default class extends PureComponent {
             <iframe
               height="500"
               src="https://www.youtube.com/embed/KSWSs9UsNpc?rel=0&amp;showinfo=0&amp;start=206"
-              frameborder="0"
-              allowfullscreen
+              frameBorder="0"
+              allowFullScreen
             />
           </div>
         </Modal>

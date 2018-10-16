@@ -10,6 +10,9 @@ h1, h2, h3, h4, h5, h6 {
 
 html {
     background-color: #000;
+    background-image: url("/static/download.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .banner {
@@ -19,10 +22,10 @@ html {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    height: calc(100vh - 108px);
+    height: 100vh;
     min-height: 600px;
     padding: 0 40px;
-    background:linear-gradient(0deg,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85)),url("/static/download.jpg");
+    background:linear-gradient(0deg,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85));
     background-size:cover;
     color: #fff;
   }
@@ -63,9 +66,10 @@ html {
 }
 
 .oss-wrapper {
-    background-color: #673AB7;
-    padding-top: 30px;
+    background-color: #8300fb;
     padding-bottom: 60px;
+    margin-top: -152px;
+    padding-top: 150px;
 }
 
 .mdl-card__supporting-text {
