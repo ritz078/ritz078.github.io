@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "start": "next start",
+    "start": "serve",
     "build": "next build && next export -o personal-web",
     "deploy": "npm run build && cd personal-web && now",
     "format": "prettier --write 'pages/*.js' 'components/*.js'",
@@ -38,6 +38,7 @@
     "prettier": "^1.11.1",
     "puppeteer": "^1.2.0",
     "raw-loader": "^0.5.1",
+    "serve": "^10.0.2",
     "sw-precache-webpack-plugin": "^0.11.5"
   }
 }
