@@ -16,7 +16,7 @@ module.exports = {
         test: /\.css$/,
         use: ['babel-loader', 'raw-loader', 'postcss-loader']
       }
-    )
+    );
 
     if(!dev) {
       config.plugins.push(

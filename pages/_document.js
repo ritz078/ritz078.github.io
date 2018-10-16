@@ -9,6 +9,19 @@ export default class MyDocument extends Document {
     return { html, head, errorHtml, chunks, styles };
   }
 
+  componentDidMount() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(() => {
+          console.log("service worker registration successful");
+        })
+        .catch(err => {
+          console.warn("service worker registration failed", err);
+        });
+    }
+  }
+
   render() {
     return (
       <html lang="en-us">
