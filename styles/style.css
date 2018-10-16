@@ -1,168 +1,172 @@
 @import "./base";
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: inherit;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: inherit;
 }
 
 * {
-    -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
-    background-color: #000;
-    background-image: url("/static/download.jpg");
-    background-attachment: fixed;
-    background-size: cover;
+  background-color: #000;
+  background-image: url("/static/download.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .banner {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    height: 100vh;
-    min-height: 600px;
-    padding: 0 40px;
-    background:linear-gradient(0deg,rgba(0, 0, 0, 0.85),rgba(0, 0, 0, 0.85));
-    background-size:cover;
-    color: #fff;
-  }
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+  min-height: 600px;
+  padding: 0 40px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
+  background-size: cover;
+  color: #fff;
+}
 
-  button:hover {
-    background-color: #2398f5;
-  }
+button:hover {
+  background-color: #2398f5;
+}
 
-  .screenshots {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 500px;
-    flex: 1;
-    max-width: 1100px;
-    flex-wrap: wrap;
-    margin: 0 auto;
+.screenshots {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 500px;
+  flex: 1;
+  max-width: 1100px;
+  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .screenshot-img {
-    flex: 1;
+  flex: 1;
 }
 
 .demo-card-square.mdl-card {
-    width: 320px;
-    height: 320px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+  width: 320px;
+  height: 320px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.screenshot-img>div {
-    width: 100%;
-    height: 100%;
-    background-position: 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    border-bottom: 1px solid #eee;
+.screenshot-img > div {
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid #eee;
 }
 
 .oss-wrapper {
-    background-color: #8300fb;
-    padding-bottom: 60px;
-    margin-top: -152px;
-    padding-top: 150px;
+  background-color: #ff8f00;
+  padding-bottom: 60px;
+  margin-top: -152px;
+  padding-top: 150px;
 }
 
 .mdl-card__supporting-text {
-    width: 100%;
-    line-height: 20px;
+  width: 100%;
+  line-height: 20px;
 }
 
 .mdl-card__actions .source {
-    float: right;
-    margin-right: 8px;
+  float: right;
+  margin-right: 8px;
 }
 
 .mdl-card__actions .mdl-button--icon {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .social-home {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .social-home svg {
-    color: #fff;
-    height: 32px;
+  color: #fff;
+  height: 32px;
 }
 
 .ReactModal__Overlay {
-    z-index: 9;
+  z-index: 9;
 }
 
 body.ReactModal__Body--open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .mdl-list__item {
-    color: #fff;
+  color: #fff;
 }
 
 .mdl-list__item--three-line .mdl-list__item-text-body {
-    color: #fff;
-    margin-top: 5px;
+  color: #fff;
+  margin-top: 5px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
+.rs-img {
+  height: 100%;
+  background: no-repeat center;
+  background-size: cover;
+  float: left;
+  opacity: 0.6;
+  width: 100%;
+  will-change: opacity;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+}
 
-.rs-img{
-    height: 100%;
-    background: no-repeat center;
-    background-size: cover;
-    float: left;
-    opacity: 0.6;
-    width: 100%;
-    will-change: opacity;
-    transition: opacity .3s;
-    -webkit-transition: opacity .3s;
-    -moz-transition: opacity .3s;
-    -o-transition: opacity .3s;
-  }
-
-  .rs-loaded{
-    opacity: 1;
-    background-size: contain;
-  }
+.rs-loaded {
+  opacity: 1;
+  background-size: contain;
+}
 
 .mdl-button {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 .resume-wrapper a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .talks .mdl-list__item {
-    color: #222;
+  color: #222;
 }
 
 .talks .mdl-list__item--three-line .mdl-list__item-text-body {
-    color: #444;
+  color: #444;
 }
 
-.contact-me .mdl-button--fab{
-    background-color: transparent;
+.contact-me .mdl-button--fab {
+  background-color: transparent;
 }
 
 .contact-me .mdl-button--fab path {
-    fill: #fff !important;
+  fill: #fff !important;
 }
 
 .contact-me .mdl-button--fab svg {
-    margin-top: -4px;
-    height: 28px;
+  margin-top: -4px;
+  height: 28px;
 }
