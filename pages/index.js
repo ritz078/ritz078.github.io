@@ -7,6 +7,7 @@ import Writing from "../components/Writing";
 import { Github, Twitter, LinkedIn, Medium } from "../components/Svgs";
 import materialCss from "material-design-lite/material.css";
 import Talks from "../components/Talks";
+import Link from "next/link";
 
 function Contact() {
   return (
@@ -54,7 +55,7 @@ export default class extends PureComponent {
             content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
           />
           <meta name="theme-color" content="#673ab7" />
-          <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver"></script>
+          <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver" />
         </Head>
         <style dangerouslySetInnerHTML={{ __html: materialCss }} />
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
@@ -125,9 +126,11 @@ export default class extends PureComponent {
           </h5>
 
           <div className="contact">
-            <a href="/resume">
-              <button>Resume</button>
-            </a>
+            <Link href="/resume" prefetch>
+              <a>
+                <button>Resume</button>
+              </a>
+            </Link>
             <a href="mailto:rkritesh078@gmail.com">
               <button>Contact</button>
             </a>
