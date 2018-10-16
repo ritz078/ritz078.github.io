@@ -1,7 +1,7 @@
 const glob = require('glob')
-const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin')
+const withOffline = require('next-offline');
 
-module.exports = {
+module.exports = withOffline({
   webpack: (config, { dev }) => {
     config.module.rules.push(
       {
@@ -18,24 +18,6 @@ module.exports = {
       }
     );
 
-    if(!dev) {
-      config.plugins.push(
-        new SWPrecacheWebpackPlugin({
-          minify: true,
-          staticFileGlobsIgnorePatterns: [/\.next\//],
-          staticFileGlobs: [
-            'static/**/*' // Precache all static files by default
-          ],
-          runtimeCaching: [
-            {
-              handler: "networkFirst",
-              urlPattern: /^https?.*/
-            }
-          ]
-        })
-      )
-    }
-
     return config
   },
 
@@ -48,4 +30,4 @@ module.exports = {
     })
     return pathMap
   }
-}
+})
