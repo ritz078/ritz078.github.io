@@ -1,5 +1,5 @@
 {
-  "public": ".next",
+  "public": "./personal-web",
   "headers": [
     {
       "source": "**/*.@(jpg|jpeg|gif|png)",
