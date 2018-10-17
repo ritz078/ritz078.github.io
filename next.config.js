@@ -1,8 +1,7 @@
-const glob = require('glob')
 const withOffline = require('next-offline');
 
 module.exports = withOffline({
-  webpack: (config, { dev }) => {
+  webpack: (config) => {
     config.module.rules.push(
       {
         test: /\.(css|scss)/,
@@ -19,15 +18,5 @@ module.exports = withOffline({
     );
 
     return config
-  },
-
-  exportPathMap() {
-    const pathMap = {}
-    glob.sync('pages/**/*.js', { ignore: 'pages/_document.js' }).forEach(s => {
-      const path = s.split(/(pages|\.)/)[2].replace(/^\/index$/, '/')
-      console.log(path)
-      pathMap[path] = { page: path }
-    })
-    return pathMap
   }
 })

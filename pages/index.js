@@ -5,7 +5,6 @@ import FeaturedOSS from "../components/FeaturedOSS";
 import Conference from "../components/Conference";
 import Writing from "../components/Writing";
 import { Github, Twitter, LinkedIn, Medium } from "../components/Svgs";
-import materialCss from "material-design-lite/material.css";
 import Talks from "../components/Talks";
 import Link from "next/link";
 
@@ -57,7 +56,6 @@ export default class extends PureComponent {
           <meta name="theme-color" content="#673ab7" />
           <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver" />
         </Head>
-        <style dangerouslySetInnerHTML={{ __html: materialCss }} />
         <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
         <style jsx>{`
           h5 {
