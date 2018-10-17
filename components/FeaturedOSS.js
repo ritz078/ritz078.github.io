@@ -134,8 +134,7 @@ export default class extends PureComponent {
 
                 <a href={s.source} className="source">
                   <button
-                    aria-label="Source Code"
-                    aria-labelledby="open-source"
+                    aria-label="github repo"
                     className="mdl-button mdl-js-button mdl-button--icon"
                   >
                     <Github />

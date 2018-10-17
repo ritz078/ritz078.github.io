@@ -14,7 +14,7 @@ const experience = [
     timeline: "Oct 2017 - Present",
     content: [
       "Developing the design system framework and tooling for web and React Native.",
-      "<a target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - Developed an app built using React Native for agents.",
+      "<a class='link' target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - Developed an app built using React Native for agents.",
       "Involved in the initial tech team setup."
     ]
   },
@@ -23,19 +23,10 @@ const experience = [
     label: "Housing.com | Senior Software Developer",
     timeline: "June 2015 - Oct 2017",
     content: [
-      "<a target='_blank' href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
-      "<a target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
+      "<a class='link' target='_blank' href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
+      "<a class='link' target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
       "Housing Partner - Created a dashboard used by brokers and owners using Angular 2 and ngrx."
     ]
-  }
-];
-
-const education = [
-  {
-    url: "https://www.iitr.ac.in/",
-    label: "B.Tech in Electrical Engineering",
-    timeline: "2011 - 2015",
-    desc: "Indian Institute of Technology, Roorkee (IIT Roorkee)"
   }
 ];
 
@@ -44,7 +35,7 @@ const oss = [
     url: "https://github.com/transform-it",
     label: "Transform",
     desc:
-      "An <a href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a href='https://github.com/transform-it'>tranform-it</a>."
+      "An <a class='link' href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a class='link' href='https://github.com/transform-it'>tranform-it</a>."
   },
   {
     url: "https://github.com/ritz078/pebble",
@@ -233,14 +224,7 @@ export default class extends PureComponent {
               padding: 8px 0;
             }
 
-            a {
-              color: #1565c0;
-              text-decoration: none;
-            }
 
-            a:hover {
-              color: #104e96;
-            }
 
             .content {
               line-height: 25px;
@@ -297,7 +281,20 @@ export default class extends PureComponent {
               margin-bottom: 25px;
             }
           `}</style>
-          <div style={{height: 50}} className="no-print" />
+
+          <style jsx global>{`
+            a.link {
+              color: #1565c0;
+              text-decoration: none;
+            }
+
+            a.link:hover {
+              color: #104e96;
+              text-decoration: underline;
+            }
+          `}</style>
+
+          <div style={{ height: 50 }} className="no-print" />
 
           <div className="resume-wrapper">
             <div className="left">
@@ -305,7 +302,12 @@ export default class extends PureComponent {
                 <div className="name">Ritesh Kumar</div>
                 <div className="designation">JavaScript Developer</div>
                 <div className="location">
-                  <a href="https://github.com/ritz078">
+                  <a
+                    rel="noreferrer"
+                    href="https://github.com/ritz078"
+                    target="_blank"
+                    className="link"
+                  >
                     https://github.com/ritz078
                   </a>
                 </div>
@@ -321,7 +323,7 @@ export default class extends PureComponent {
                     }`}
                   >
                     <div className="title">
-                      <a href={e.url} target="_blank">
+                      <a className="link" href={e.url} rel="noreferrer" target="_blank">
                         {e.label}
                       </a>
                     </div>
@@ -339,14 +341,14 @@ export default class extends PureComponent {
 
               <h3>
                 Open Source Projects
-                <a href="https://github.com/search?l=&o=desc&q=user%3Aritz078+user%3Atransform-it&ref=advsearch&s=&type=Repositories&utf8=%E2%9C%93">
+                <a className="link" href="https://github.com/search?l=&o=desc&q=user%3Aritz078+user%3Atransform-it&ref=advsearch&s=&type=Repositories&utf8=%E2%9C%93">
                   <i className="fa fa-external-link see-more" />
                 </a>
               </h3>
               <ul className="section-wrapper oss">
                 {oss.map(e => (
                   <li key={e.url} className="experience">
-                    <a href={e.url} target="_blank">
+                    <a className="link" href={e.url} rel="noreferrer" target="_blank">
                       {e.label}
                     </a>{" "}
                     -{" "}
@@ -360,7 +362,7 @@ export default class extends PureComponent {
 
               <h3>
                 Conference/Meetup Talks
-                <a href="https://riteshkr.com#talks">
+                <a className="link" href="https://riteshkr.com#talks">
                   <i className="fa fa-external-link see-more" />
                 </a>
               </h3>
@@ -368,8 +370,10 @@ export default class extends PureComponent {
                 <ul className="content">
                   <li>
                     <a
+                      rel="noreferrer"
                       href="https://youtu.be/KSWSs9UsNpc?t=3m26s"
                       target="_blank"
+                      className="link"
                     >
                       Chrome Developers Summit 2016
                     </a>{" "}
@@ -378,8 +382,10 @@ export default class extends PureComponent {
                   </li>
                   <li>
                     <a
+                      rel="noreferrer"
                       href="https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600"
                       target="_blank"
+                      className="link"
                     >
                       React Native: The Development Flow
                     </a>{" "}
@@ -389,45 +395,66 @@ export default class extends PureComponent {
                 </ul>
               </div>
 
-              <h3>
-                Side Project
-              </h3>
+              <h3>Side Project</h3>
               <div className="section-wrapper">
                 <ul className="content">
                   <li>
-                    An online platform (WIP) to play midis and also record music.
-                    The project involves web workers, WebAudio, WebMIDI and a lot of work around performance. The demos can be found <a
-                    href="https://twitter.com/ritz078/status/1048939754819993601">here</a> and <a href="https://twitter.com/ritz078/status/1048809603889336320">here</a>.
+                    An online platform (WIP) to play midis and also record
+                    music. The project involves web workers, WebAudio, WebMIDI
+                    and a lot of work around performance. The demos can be found{" "}
+                    <a className="link" href="https://twitter.com/ritz078/status/1048939754819993601">
+                      here
+                    </a>{" "}
+                    and{" "}
+                    <a className="link" href="https://twitter.com/ritz078/status/1048809603889336320">
+                      here
+                    </a>
+                    .
                   </li>
                 </ul>
               </div>
-
             </div>
             <div className="right">
               <div className="social mb30">
-                <a target="_blank" href="https://github.com/ritz078">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://github.com/ritz078"
+                >
                   <i className="fa fa-github" />
                 </a>
-                <a target="_blank" href="https://twitter.com/ritz078">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://twitter.com/ritz078"
+                >
                   <i className="fa fa-twitter" />
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/ritz078">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/in/ritz078"
+                >
                   <i className="fa fa-linkedin" />
                 </a>
-                <a target="_blank" href="https://medium.com/@ritz078">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://medium.com/@ritz078"
+                >
                   <i className="fa fa-medium" />
                 </a>
               </div>
 
               <div className="content mb30 contact">
                 <i className="fa fa-fw fa-envelope" />
-                <a href="mailto:rkritesh078@gmail.com">rkritesh078@gmail.com</a>
+                <a className="link" href="mailto:rkritesh078@gmail.com">rkritesh078@gmail.com</a>
                 <br />
                 <i className="fa fa-fw fa-map-marker" />
                 Mumbai, India
                 <br />
                 <i className="fa fa-fw fa-globe" />
-                <a href="https://riteshkr.com" target="_blank">
+                <a className="link" rel="noreferrer" href="https://riteshkr.com" target="_blank">
                   https://riteshkr.com
                 </a>
               </div>

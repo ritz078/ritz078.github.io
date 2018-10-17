@@ -74,16 +74,17 @@ export default function() {
 
         a {
           font-size: 18px;
+          color: #af003b;
         }
         a:hover {
           text-decoration: underline;
         }
 
         .sub {
-          color: #828282;
+          color: #4e4e4e;
           font-size: 14px;
           padding-top: 4px;
-          line-height: 24px;
+          line-height: 32px;
         }
 
         .sub i {
@@ -102,7 +103,7 @@ export default function() {
       `}</style>
 
       <div className="talks">
-        <h4 id="open-source">Conference / Meetup Talks</h4>
+        <h4>Conference / Meetup Talks</h4>
 
         <ul className="demo-list-three mdl-list ul">
           {talks.map((x, i) => (
@@ -112,7 +113,7 @@ export default function() {
             >
               <div className="mdl-list__item-primary-content">
                 <div>
-                  <a href={x.url} target="_blank">
+                  <a href={x.url} target="_blank" rel="noreferrer">
                     {x.title}
                   </a>
                 </div>
