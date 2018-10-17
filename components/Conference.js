@@ -13,7 +13,7 @@ export default class extends PureComponent {
     });
   };
 
-  closeModal = (e) => {
+  closeModal = e => {
     e.stopPropagation();
 
     this.setState({
@@ -53,8 +53,8 @@ export default class extends PureComponent {
             margin: 0 auto;
             cursor: pointer;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px 0px;
-                transform: translateY(-50%);
-                transition: all 200ms;
+            transform: translateY(-50%);
+            transition: all 200ms;
           }
 
           .conf-wrapper:hover {
@@ -84,8 +84,8 @@ export default class extends PureComponent {
           .conference-img {
             background-image: url("./static/conference.jpg");
             height: 108px;
-            width: 200px;
-            background-size: cover;
+            width: 192px;
+            background-size: contain;
             background-position: center;
             display: flex;
             justify-content: center;
@@ -94,6 +94,7 @@ export default class extends PureComponent {
             color: #fff;
             cursor: pointer;
             background-color: #673ab7;
+            background-repeat: no-repeat;
           }
 
           .conference-img:hover {
@@ -140,6 +141,11 @@ export default class extends PureComponent {
           @media screen and (max-width: 700px) {
             .conference {
               flex-direction: column;
+            }
+
+            .conf-wrapper {
+            transform: translateY(0);
+            padding: 0;
             }
 
             .conference-info {
