@@ -401,7 +401,7 @@ export default class extends PureComponent {
                   <li>
                     An online platform (WIP) to play midis and also record
                     music. The project involves web workers, WebAudio, WebMIDI
-                    and a lot of work around performance. The demos can be found{" "}
+                    and a lot of work around performance. A sneak peek can be found{" "}
                     <a className="link" href="https://twitter.com/ritz078/status/1048939754819993601">
                       here
                     </a>{" "}
