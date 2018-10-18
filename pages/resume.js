@@ -470,7 +470,7 @@ export default class extends PureComponent {
 
               <h3>Education</h3>
               <div className="content mb30 contact">
-                B.Tech. in Electrical Eng. (2011-15)<br />
+                B.Tech. in Electrical Eng.<br />
                 <a className="link" href="https://iitr.ac.in" rel="noreferrer" target="_blank">IIT Roorkee</a>
               </div>
             </div>
