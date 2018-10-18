@@ -73,7 +73,7 @@ export default class extends PureComponent {
             margin-top: 0px;
           }
 
-          h7 {
+          h6 {
             color: #fff;
             margin-bottom: 0;
             margin-top: -7px;
@@ -174,10 +174,10 @@ export default class extends PureComponent {
           </div>
           <div className="conference-info">
             <h5>Chrome Developer Summit 2016</h5>
-            <h7>
+            <h6>
               Spoke about the development process and performance optimisations
               we did to improve our mobile experience.
-            </h7>
+            </h6>
           </div>
         </div>
         <Modal

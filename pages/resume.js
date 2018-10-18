@@ -13,7 +13,7 @@ const experience = [
     label: "Anarock | Lead Software Developer",
     timeline: "Oct 2017 - Present",
     content: [
-      "Developing the design system framework and tooling for web and React Native.",
+      "Developing the design system and tooling for web and React Native.",
       "<a class='link' target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - Developed an app built using React Native for agents.",
       "Involved in the initial tech team setup."
     ]
@@ -25,7 +25,6 @@ const experience = [
     content: [
       "<a class='link' target='_blank' href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
       "<a class='link' target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
-      "Housing Partner - Created a dashboard used by brokers and owners using Angular 2 and ngrx."
     ]
   }
 ];
@@ -108,6 +107,7 @@ export default class extends PureComponent {
             />
             <meta
               name="description"
+              key="description"
               content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
             />
           </Head>
@@ -241,7 +241,7 @@ export default class extends PureComponent {
             }
 
             .info {
-              margin-bottom: 30px;
+              margin-bottom: 20px;
             }
 
             .designation,
@@ -466,6 +466,12 @@ export default class extends PureComponent {
                 TypeScript, CoffeeScript
                 <br />
                 Git
+              </div>
+
+              <h3>Education</h3>
+              <div className="content mb30 contact">
+                B.Tech. in Electrical Eng. (2011-15)<br />
+                <a className="link" href="https://iitr.ac.in" rel="noreferrer" target="_blank">IIT Roorkee</a>
               </div>
             </div>
           </div>
