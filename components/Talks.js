@@ -9,6 +9,12 @@ const talks = [
       "Spoke about the development process and performance optimisations we did to improve our mobile experience."
   },
   {
+    title: "Web Workers: A graphical intro.",
+    url: "https://speakerdeck.com/ritz078/web-workers-a-musical-intro",
+    location: "Bangalore, India",
+    desc: "This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI."
+  },
+  {
     title: "The hidden and new parts of JS.",
     url: "https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js",
     location: "Mumbai, India",
@@ -26,11 +32,6 @@ const talks = [
     url: "https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600",
     location: "Mumbai, India",
     desc: "A talk about the whys and hows of debugging, performance optimizations and improved release cycles so that the next time you are developing a React Native application, you feel at home."
-  },
-  {
-    title: "Web Workers: A graphical intro.",
-    location: "Bangalore, India",
-    desc: "This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI."
   }
 ];
 
