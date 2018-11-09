@@ -9,7 +9,7 @@ const talks = [
       "Spoke about the development process and performance optimisations we did to improve our mobile experience."
   },
   {
-    title: "Web Workers: A graphical intro.",
+    title: "Web Workers: A musical intro.",
     url: "https://speakerdeck.com/ritz078/web-workers-a-musical-intro",
     location: "Bangalore, India",
     desc: "This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI."

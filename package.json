@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "start": "next start",
     "build": "next build",
+    "export": "next export",
     "format": "prettier --write 'pages/*.js' 'components/*.js'",
     "pdf": "node ./pdf.js && git add static/*"
   },

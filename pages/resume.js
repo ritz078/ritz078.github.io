@@ -383,14 +383,13 @@ export default class extends PureComponent {
                   <li>
                     <a
                       rel="noreferrer"
-                      href="https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600"
+                      href="https://www.youtube.com/watch?v=1RSUfWAKQ_M"
                       target="_blank"
                       className="link"
                     >
-                      React Native: The Development Flow
+                      Web Workers: A musical intro.
                     </a>{" "}
-                    - A talk about the whys and hows of debugging, performance
-                    optimizations and improved release cycles.
+                    - A talk about how I improved the performance of a music app on the web using web workers.
                   </li>
                 </ul>
               </div>
@@ -409,7 +408,7 @@ export default class extends PureComponent {
                     <a className="link" href="https://twitter.com/ritz078/status/1048809603889336320">
                       here
                     </a>
-                    .
+                    . The source code is available <a className="link" href="https://github.com/ritz078/raaga">on GitHub</a>.
                   </li>
                 </ul>
               </div>
