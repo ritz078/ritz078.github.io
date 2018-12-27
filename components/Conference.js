@@ -188,7 +188,7 @@ export default class extends PureComponent {
           <div className="yt-wrapper">
             <iframe
               height="500"
-              src="https://www.youtube.com/watch?v=1RSUfWAKQ_M"
+              src="https://www.youtube.com/embed/1RSUfWAKQ_M"
               frameBorder="0"
               allowFullScreen
             />
