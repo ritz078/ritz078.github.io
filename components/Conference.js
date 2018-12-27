@@ -173,10 +173,9 @@ export default class extends PureComponent {
             <Play />
           </div>
           <div className="conference-info">
-            <h5>Chrome Developer Summit 2016</h5>
+            <h5>Web Workers: A musical intro</h5>
             <h6>
-              Spoke about the development process and performance optimisations
-              we did to improve our mobile experience.
+              This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI.
             </h6>
           </div>
         </div>
@@ -189,7 +188,7 @@ export default class extends PureComponent {
           <div className="yt-wrapper">
             <iframe
               height="500"
-              src="https://www.youtube.com/embed/KSWSs9UsNpc?rel=0&amp;showinfo=0&amp;start=206"
+              src="https://www.youtube.com/watch?v=1RSUfWAKQ_M"
               frameBorder="0"
               allowFullScreen
             />
