@@ -77,7 +77,7 @@ export default class extends PureComponent {
             color: #fff;
             margin-bottom: 0;
             margin-top: -7px;
-            font-size: 15px;
+            font-size: 13px;
             line-height: 22px;
           }
 
