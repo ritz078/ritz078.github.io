@@ -1,5 +1,8 @@
 {
-  "name":  "ritz078",
-  "alias":  ["riteshkr.com"],
-  "type": "static"
+  "version": 2,
+  "name": "ritz078",
+  "alias": "riteshkr.com",
+  "builds": [
+    { "src": "package.json", "use": "@now/static-build" }
+  ]
 }
