@@ -16,9 +16,6 @@ h6 {
 
 html {
   background-color: #000;
-  background-image: url("/static/download.jpg");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .banner {
