@@ -13,7 +13,7 @@ const experience = [
     label: "Anarock | Lead Software Developer",
     timeline: "Oct 2017 - Present",
     content: [
-      "Developing the design system and tooling for web and React Native.",
+      "Developing the <a class='link' target='_blank' href='https://github.com/anarock/pebble'>design system</a> and tooling for web and React Native.",
       "<a class='link' target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - Developed an app built using React Native for agents.",
       "Involved in the initial tech team setup."
     ]
@@ -37,7 +37,7 @@ const oss = [
       "An <a class='link' href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a class='link' href='https://github.com/transform-it'>tranform-it</a>."
   },
   {
-    url: "https://github.com/ritz078/pebble",
+    url: "https://github.com/anarock/pebble",
     label: "pebble",
     desc:
       "A set of lightweight and accessible React component written in typescript and emotion."
