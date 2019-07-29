@@ -24,17 +24,16 @@ const experience = [
     timeline: "June 2015 - Oct 2017",
     content: [
       "<a class='link' target='_blank' href='https://medium.com/engineering-housing/how-we-built-our-react-native-app-3380a33811ac'>Housing App</a> - Developed a cross platform app using React-Native. It also included Redux, Observables and Immutable.js",
-      "<a class='link' target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering.",
+      "<a class='link' target='_blank' href='https://medium.com/engineering-housing/progressing-mobile-web-fac3efb8b454'>Housing Go</a> - Development of a PWA from scratch which involved React, redux, architecture setup and Server Side Rendering."
     ]
   }
 ];
 
 const oss = [
   {
-    url: "https://github.com/transform-it",
+    url: "https://transform.tools",
     label: "Transform",
-    desc:
-      "An <a class='link' href='https://transform.now.sh'>online REPL</a> for important transformations. All packages are under the organisation <a class='link' href='https://github.com/transform-it'>tranform-it</a>."
+    desc: "A polyglot web converter. Source code available on <a href='https://github.com/ritz078/transform'>GitHub</a>."
   },
   {
     url: "https://github.com/anarock/pebble",
@@ -224,8 +223,6 @@ export default class extends PureComponent {
               padding: 8px 0;
             }
 
-
-
             .content {
               line-height: 25px;
               color: #545454;
@@ -323,7 +320,12 @@ export default class extends PureComponent {
                     }`}
                   >
                     <div className="title">
-                      <a className="link" href={e.url} rel="noreferrer" target="_blank">
+                      <a
+                        className="link"
+                        href={e.url}
+                        rel="noreferrer"
+                        target="_blank"
+                      >
                         {e.label}
                       </a>
                     </div>
@@ -341,14 +343,22 @@ export default class extends PureComponent {
 
               <h3>
                 Open Source Projects
-                <a className="link" href="https://github.com/search?l=&o=desc&q=user%3Aritz078+user%3Atransform-it&ref=advsearch&s=&type=Repositories&utf8=%E2%9C%93">
+                <a
+                  className="link"
+                  href="https://github.com/search?l=&o=desc&q=user%3Aritz078+user%3Atransform-it&ref=advsearch&s=&type=Repositories&utf8=%E2%9C%93"
+                >
                   <i className="fa fa-external-link see-more" />
                 </a>
               </h3>
               <ul className="section-wrapper oss">
                 {oss.map(e => (
                   <li key={e.url} className="experience">
-                    <a className="link" href={e.url} rel="noreferrer" target="_blank">
+                    <a
+                      className="link"
+                      href={e.url}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
                       {e.label}
                     </a>{" "}
                     -{" "}
@@ -389,7 +399,8 @@ export default class extends PureComponent {
                     >
                       Web Workers: A musical intro.
                     </a>{" "}
-                    - A talk about how I improved the performance of a music app on the web using web workers.
+                    - A talk about how I improved the performance of a music app
+                    on the web using web workers.
                   </li>
                 </ul>
               </div>
@@ -400,15 +411,26 @@ export default class extends PureComponent {
                   <li>
                     An online platform (WIP) to play midis and also record
                     music. The project involves web workers, WebAudio, WebMIDI
-                    and a lot of work around performance. A sneak peek can be found{" "}
-                    <a className="link" href="https://twitter.com/ritz078/status/1048939754819993601">
+                    and a lot of work around performance. A sneak peek can be
+                    found{" "}
+                    <a
+                      className="link"
+                      href="https://twitter.com/ritz078/status/1048939754819993601"
+                    >
                       here
                     </a>{" "}
                     and{" "}
-                    <a className="link" href="https://twitter.com/ritz078/status/1048809603889336320">
+                    <a
+                      className="link"
+                      href="https://twitter.com/ritz078/status/1048809603889336320"
+                    >
                       here
                     </a>
-                    . The source code is available <a className="link" href="https://github.com/ritz078/raaga">on GitHub</a>.
+                    . The source code is available{" "}
+                    <a className="link" href="https://github.com/ritz078/raaga">
+                      on GitHub
+                    </a>
+                    .
                   </li>
                 </ul>
               </div>
@@ -447,13 +469,20 @@ export default class extends PureComponent {
 
               <div className="content mb30 contact">
                 <i className="fa fa-fw fa-envelope" />
-                <a className="link" href="mailto:rkritesh078@gmail.com">rkritesh078@gmail.com</a>
+                <a className="link" href="mailto:rkritesh078@gmail.com">
+                  rkritesh078@gmail.com
+                </a>
                 <br />
                 <i className="fa fa-fw fa-map-marker" />
                 Mumbai, India
                 <br />
                 <i className="fa fa-fw fa-globe" />
-                <a className="link" rel="noreferrer" href="https://riteshkr.com" target="_blank">
+                <a
+                  className="link"
+                  rel="noreferrer"
+                  href="https://riteshkr.com"
+                  target="_blank"
+                >
                   https://riteshkr.com
                 </a>
               </div>
@@ -469,8 +498,16 @@ export default class extends PureComponent {
 
               <h3>Education</h3>
               <div className="content mb30 contact">
-                B.Tech. in Electrical Eng.<br />
-                <a className="link" href="https://iitr.ac.in" rel="noreferrer" target="_blank">IIT Roorkee</a>
+                B.Tech. in Electrical Eng.
+                <br />
+                <a
+                  className="link"
+                  href="https://iitr.ac.in"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  IIT Roorkee
+                </a>
               </div>
             </div>
           </div>
