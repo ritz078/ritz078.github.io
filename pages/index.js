@@ -124,7 +124,7 @@ export default class extends PureComponent {
           </h5>
 
           <div className="contact">
-            <Link href="/resume" prefetch>
+            <Link href="/resume">
               <a>
                 <button>Resume</button>
               </a>

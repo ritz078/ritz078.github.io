@@ -6,3 +6,4 @@ personal-web
 .DS_Store
 .tool-versions
 yarn-error.log
+dist

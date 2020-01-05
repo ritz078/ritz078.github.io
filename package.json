@@ -6,11 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export -o dist",
     "export": "next export",
     "format": "prettier --write 'pages/*.js' 'components/*.js'",
-    "pdf": "node ./pdf.js && git add public/static/*",
-    "now-build": "next build && next export -o dist"
+    "pdf": "node ./pdf.js && git add public/static/*"
   },
   "author": "",
   "license": "ISC",

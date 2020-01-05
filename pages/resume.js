@@ -80,7 +80,7 @@ export default class extends PureComponent {
           <header className="header no-print">
             <div className="flex">
               <div>
-                <Link prefetch href="/" key="link">
+                <Link href="/" key="link">
                   <a className="back">
                     <button className="mdl-button back-btn mdl-button--primary">
                       <i className="fa fa-angle-left" />
