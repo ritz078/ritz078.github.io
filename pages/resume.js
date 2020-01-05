@@ -1,17 +1,24 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
-import stylesheet from "../styles/base.css";
+import stylesheet from "../public/styles/base.css";
 import Link from "next/link";
 
 const colors = {
   primary: "#e05588"
 };
 
-const experience = [
+const experience = [{
+  url: "https://pspdfkit.com",
+  label: "PSPDFKit | Front-end Engineer",
+  timeline: "Sept 2019 - Present",
+  content: [
+      // "Working on PSPDFKit for Web."
+  ]
+},
   {
     url: "https://anarock.com",
     label: "Anarock | Lead Software Developer",
-    timeline: "Oct 2017 - Present",
+    timeline: "Oct 2017 - Aug 2019",
     content: [
       "Developing the <a class='link' target='_blank' href='https://github.com/anarock/pebble'>design system</a> and tooling for web and React Native.",
       "<a class='link' target='_blank' href='https://play.google.com/store/apps/details?id=com.anarock.agentsapp'>Agents App</a> - Developed an app built using React Native for agents.",
@@ -30,6 +37,11 @@ const experience = [
 ];
 
 const oss = [
+  {
+    url:"https://raaga.io",
+    label: "Raaga",
+    desc: "An online app to play and learn music on a keyboard. Source code available on <a href='https://github.com/ritz078/raaga'>GitHub</a>"
+  },
   {
     url: "https://transform.tools",
     label: "Transform",
@@ -392,6 +404,17 @@ export default class extends PureComponent {
                   </li>
                   <li>
                     <a
+                        rel="noreferrer"
+                        href="https://www.youtube.com/watch?v=C4ghs6QR4ZQ&t=3s"
+                        target="_blank"
+                        className="link"
+                    >
+                      Beats on the Web
+                    </a>{" "}
+                    - This talk focuses on using the power of React and the platform together to build a fast and performant music application.
+                  </li>
+                  <li>
+                    <a
                       rel="noreferrer"
                       href="https://www.youtube.com/watch?v=1RSUfWAKQ_M"
                       target="_blank"
@@ -401,36 +424,6 @@ export default class extends PureComponent {
                     </a>{" "}
                     - A talk about how I improved the performance of a music app
                     on the web using web workers.
-                  </li>
-                </ul>
-              </div>
-
-              <h3>Side Project</h3>
-              <div className="section-wrapper">
-                <ul className="content">
-                  <li>
-                    An online platform (WIP) to play midis and also record
-                    music. The project involves web workers, WebAudio, WebMIDI
-                    and a lot of work around performance. A sneak peek can be
-                    found{" "}
-                    <a
-                      className="link"
-                      href="https://twitter.com/ritz078/status/1048939754819993601"
-                    >
-                      here
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      className="link"
-                      href="https://twitter.com/ritz078/status/1048809603889336320"
-                    >
-                      here
-                    </a>
-                    . The source code is available{" "}
-                    <a className="link" href="https://github.com/ritz078/raaga">
-                      on GitHub
-                    </a>
-                    .
                   </li>
                 </ul>
               </div>

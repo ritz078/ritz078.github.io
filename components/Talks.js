@@ -5,33 +5,31 @@ const talks = [
     title: "Housing Go: How we built it.",
     url: "https://youtu.be/KSWSs9UsNpc?t=3m26s",
     location: "San Francisco, CA",
-    desc:
-      "Spoke about the development process and performance optimisations we did to improve our mobile experience."
   },
   {
     title: "Web Workers: A musical intro.",
     url: "https://speakerdeck.com/ritz078/web-workers-a-musical-intro",
     location: "Bangalore, India",
-    desc: "This talk will help everyone in improving the performance of their websites which are heavy on computation and achieve a more responsive UI."
   },
   {
     title: "The hidden and new parts of JS.",
     url: "https://speakerdeck.com/ritz078/the-hidden-and-new-parts-of-js",
     location: "Mumbai, India",
-    desc:
-      "This talk involves array-like objects, DI, .sort(), let/const, async/await and some ES2018 features."
   },
   {
     title: "The current state of web",
     url: "https://www.slideshare.net/RiteshKumar346/the-current-state-of-web",
     location: "Mumbai, India",
-    desc: "A new set of new features available on the web like ResizeObserver, IntersectionObserver, variable fonts, immersive web etc."
   },
   {
     title: "React Native: The Development Flow",
     url: "https://www.slideshare.net/RiteshKumar346/react-native-the-development-flow-98850600",
     location: "Mumbai, India",
-    desc: "A talk about the whys and hows of debugging, performance optimizations and improved release cycles so that the next time you are developing a React Native application, you feel at home."
+  },
+  {
+    title: "Beats on the web: A journey into performance",
+    url: "https://www.youtube.com/watch?v=C4ghs6QR4ZQ&t=3s",
+    location: "Goa, India"
   }
 ];
 
@@ -65,7 +63,6 @@ export default function() {
 
         .li {
           width: 49%;
-          height: 180px !important;
         }
 
         .mdl-list__item-text-body {
@@ -121,8 +118,6 @@ export default function() {
                 <div className="sub">
                   <i className="fa fa-map-marker" /> {x.location}
                 </div>
-
-                <div className="mdl-list__item-text-body">{x.desc}</div>
               </div>
             </li>
           ))}

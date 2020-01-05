@@ -1,22 +1,4 @@
 const withOffline = require('next-offline');
+const withCSS = require("@zeit/next-css");
 
-module.exports = withOffline({
-  webpack: (config) => {
-    config.module.rules.push(
-      {
-        test: /\.(css|scss)/,
-        loader: 'emit-file-loader',
-        options: {
-          name: 'dist/[path][name].[ext]'
-        }
-      }
-      ,
-      {
-        test: /\.css$/,
-        use: ['babel-loader', 'raw-loader', 'postcss-loader']
-      }
-    );
-
-    return config
-  }
-})
+module.exports = withOffline(withCSS());

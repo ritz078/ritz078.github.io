@@ -5,12 +5,19 @@ import { Github } from "../components/Svgs";
 
 const screenshots = [
   {
+    id: "raaga",
+    text: "An online app to play and learn music on a keyboard.",
+    subtext: "Website",
+    url: "https://raaga.io",
+    source: "https://github.com/ritz078/raaga"
+  },
+  {
     id: "transform",
     text: "All important transformations at one place.",
     subtext: "REPL",
     url: "https://transform.now.sh",
     color: "",
-    source: "https://github.com/transform-it"
+    source: "https://github.com/ritz078/transform"
   },
   {
     id: "embed-js",
@@ -47,14 +54,6 @@ const screenshots = [
     color: "#fafafa",
     source: "https://github.com/ritz078/starring"
   },
-  {
-    id: "react-controls",
-    text: "Switch, Radio and Checkbox in React. Optimized for mobile.",
-    subtext: "demo",
-    url: "https://housinghq.github.io/react-controls",
-    color: "#ECEFF4",
-    source: "https://github.com/housinghq/react-controls"
-  }
 ];
 
 export default class extends PureComponent {

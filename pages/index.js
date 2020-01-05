@@ -1,6 +1,5 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
-import stylesheet from "../styles/style.css";
 import FeaturedOSS from "../components/FeaturedOSS";
 import Conference from "../components/Conference";
 import Writing from "../components/Writing";
@@ -51,12 +50,12 @@ export default class extends PureComponent {
           />
           <meta
             name="description"
-            content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
+            content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex Anarock, http://Housing.com, Artist, Created https://raaga.io, http://transform.now.sh , embed-js, snape"
           />
           <meta name="theme-color" content="#673ab7" />
           <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver" />
         </Head>
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          <link rel="stylesheet" href="/styles/style.css"/>
         <style jsx>{`
           h5 {
             font-weight: 100;
@@ -114,11 +113,12 @@ export default class extends PureComponent {
         <div className="banner">
           <h1>Ritesh Kumar</h1>
           <h5>
-            JavaScript Developer, Lead SDE @{" "}
-            <a href="https://anarock.com">Anarock</a>, ex{" "}
+            JavaScript Developer, Web @{" "} <a href="https://pspdfkit.com">PSPDFKit</a>
+            , ex{" "} <a href="https://anarock.com">Anarock</a>, {" "}
             <a href="https://housing.com">Housing.com</a> , Designer, Open
             Source enthusiast, Artist. Created{" "}
-            <a href="http://transform.now.sh">Transform</a>,
+              <a href="http://raaga.io">raaga</a>,
+            <a href="http://transform.tools">Transform</a>,
             <a href="https://github.com/ritz078/embed-js"> embed-js</a> and{" "}
             <a href="https://snape.in">snape</a>
           </h5>
