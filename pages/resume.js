@@ -1,20 +1,18 @@
 import React, { PureComponent } from "react";
 import Head from "next/head";
-import stylesheet from "../public/styles/base.css";
 import Link from "next/link";
 
 const colors = {
   primary: "#e05588"
 };
 
-const experience = [{
-  url: "https://pspdfkit.com",
-  label: "PSPDFKit | Front-end Engineer",
-  timeline: "Sept 2019 - Present",
-  content: [
-      // "Working on PSPDFKit for Web."
-  ]
-},
+const experience = [
+  {
+    url: "https://pspdfkit.com",
+    label: "PSPDFKit | Front-end Engineer",
+    timeline: "Sept 2019 - Present",
+    content: ["Working on PSPDFKit for Web."]
+  },
   {
     url: "https://anarock.com",
     label: "Anarock | Lead Software Developer",
@@ -38,14 +36,16 @@ const experience = [{
 
 const oss = [
   {
-    url:"https://raaga.io",
+    url: "https://raaga.io",
     label: "Raaga",
-    desc: "An online app to play and learn music on a keyboard. Source code available on <a href='https://github.com/ritz078/raaga'>GitHub</a>"
+    desc:
+      "An online app to play and learn music on a keyboard. Source code available on <a href='https://github.com/ritz078/raaga'>GitHub</a>"
   },
   {
     url: "https://transform.tools",
     label: "Transform",
-    desc: "A polyglot web converter. Source code available on <a href='https://github.com/ritz078/transform'>GitHub</a>."
+    desc:
+      "A polyglot web converter. Source code available on <a href='https://github.com/ritz078/transform'>GitHub</a>."
   },
   {
     url: "https://github.com/anarock/pebble",
@@ -72,10 +72,10 @@ const oss = [
   }
 ];
 
-export default class extends PureComponent {
+export default class Resume extends PureComponent {
   render() {
     return (
-      <div>
+      <div className="resume">
         <div className="wrapper" key="content">
           <header className="header no-print">
             <div className="flex">
@@ -122,8 +122,63 @@ export default class extends PureComponent {
               content="Open Sourcerer, JavaScript Developer, Lead SDE @ Anarock, ex http://Housing.com, Artist, Created http://transform.now.sh , embed-js, snape"
             />
           </Head>
-          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
           <style jsx>{`
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              font-family: "Roboto Slab", sans-serif;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            .social {
+              font-size: 14px;
+              display: flex;
+              justify-content: space-around;
+              width: 100%;
+              padding-bottom: 30px;
+              max-width: 200px;
+            }
+
+            .social i {
+              color: #fff;
+              background-color: #4a4a4a;
+              width: 38px;
+              border-radius: 50%;
+              height: 38px;
+              padding: 9px 0;
+              text-align: center;
+              font-size: 20px;
+            }
+
+            .social i:hover {
+              background-color: #e43a79;
+            }
+
+            .back {
+              padding: 7px 10px;
+              color: #fff !important;
+              cursor: pointer;
+            }
+
+            @media screen and (max-width: 900px) {
+              .back {
+                right: 0;
+              }
+            }
+
+            .back i {
+              margin-right: 10px;
+            }
+
+            .oss .experience {
+              font-size: 14px;
+            }
+
             .header {
               height: 50px;
               width: 100%;
@@ -404,14 +459,16 @@ export default class extends PureComponent {
                   </li>
                   <li>
                     <a
-                        rel="noreferrer"
-                        href="https://www.youtube.com/watch?v=C4ghs6QR4ZQ&t=3s"
-                        target="_blank"
-                        className="link"
+                      rel="noreferrer"
+                      href="https://www.youtube.com/watch?v=C4ghs6QR4ZQ&t=3s"
+                      target="_blank"
+                      className="link"
                     >
                       Beats on the Web
                     </a>{" "}
-                    - This talk focuses on using the power of React and the platform together to build a fast and performant music application.
+                    - This talk focuses on using the power of React and the
+                    platform together to build a fast and performant music
+                    application.
                   </li>
                   <li>
                     <a

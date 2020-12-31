@@ -33,7 +33,7 @@ const talks = [
   }
 ];
 
-export default function() {
+export default function Talks() {
   return (
     <div className="talks-wrapper" id="talks">
       <style jsx>{`

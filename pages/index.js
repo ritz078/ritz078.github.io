@@ -34,10 +34,10 @@ function Contact() {
   );
 }
 
-export default class extends PureComponent {
+export default class App extends PureComponent {
   render() {
     return (
-      <div>
+      <div className="main">
         <Head>
           <title>Ritesh Kumar | JavaScript Developer</title>
           <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -55,7 +55,6 @@ export default class extends PureComponent {
           <meta name="theme-color" content="#673ab7" />
           <script src="https://cdn.polyfill.io/v2/polyfill.js?features=IntersectionObserver" />
         </Head>
-          <link rel="stylesheet" href="/styles/style.css"/>
         <style jsx>{`
           h5 {
             font-weight: 100;
@@ -113,11 +112,12 @@ export default class extends PureComponent {
         <div className="banner">
           <h1>Ritesh Kumar</h1>
           <h5>
-            JavaScript Developer, Web @{" "} <a href="https://pspdfkit.com">PSPDFKit</a>
-            , ex{" "} <a href="https://anarock.com">Anarock</a>, {" "}
+            JavaScript Developer, Web @{" "}
+            <a href="https://pspdfkit.com">PSPDFKit</a>, ex{" "}
+            <a href="https://anarock.com">Anarock</a>,{" "}
             <a href="https://housing.com">Housing.com</a> , Designer, Open
             Source enthusiast, Artist. Created{" "}
-              <a href="http://raaga.io">raaga</a>,
+            <a href="http://raaga.io">raaga</a>,
             <a href="http://transform.tools">Transform</a>,
             <a href="https://github.com/ritz078/embed-js"> embed-js</a> and{" "}
             <a href="https://snape.in">snape</a>
@@ -125,9 +125,7 @@ export default class extends PureComponent {
 
           <div className="contact">
             <Link href="/resume">
-              <a>
-                <button>Resume</button>
-              </a>
+              <button>Resume</button>
             </Link>
             <a href="mailto:rkritesh078@gmail.com">
               <button>Contact</button>
