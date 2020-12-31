@@ -539,11 +539,8 @@ export default class Resume extends PureComponent {
 
               <h3>Skills</h3>
               <div className="content mb30 contact">
-                JavaScript, HTML, CSS <br />
-                React, Redux, React Native, Angular 1/2 <br />
-                TypeScript, CoffeeScript
-                <br />
-                Git
+                JavaScript, TypeScript, HTML, CSS <br />
+                React, React Native, Angular 1/2 <br />
               </div>
 
               <h3>Education</h3>
