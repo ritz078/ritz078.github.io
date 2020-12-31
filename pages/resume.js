@@ -66,9 +66,9 @@ const oss = [
       "A plugin to embed emojis, media, maps, tweets, code and more. It is modular, customizable and plugin based."
   },
   {
-    url: "https://snape.in",
-    label: "Snape",
-    desc: "An electron app to search, stream and download torrents."
+    url: "https://getmoose.in",
+    label: "moose",
+    desc: "An electron app to stream and download torrents."
   }
 ];
 
