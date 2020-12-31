@@ -11,7 +11,9 @@ const experience = [
     url: "https://pspdfkit.com",
     label: "PSPDFKit | Front-end Engineer",
     timeline: "Sept 2019 - Present",
-    content: ["Working on PSPDFKit for Web."]
+    content: [
+        // "Working on PSPDFKit for Web."
+    ]
   },
   {
     url: "https://anarock.com",
